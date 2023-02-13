@@ -1,34 +1,27 @@
+/* knives page slider */
 .swiper {
   width: 100%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-}
-
-.mySwiper2 {
-  height: 80%;
-  width: 100%;
+  max-width: 754px;
+  height: 577px;
 }
 
 .mySwiper {
-  height: 20%;
   box-sizing: border-box;
-  padding: 10px 0;
+  /* padding: 10px 0; */
+  padding-top: 10px;
+  height: inherit;
 }
+
+.swiper-slide { margin-right: 0 }
 
 .mySwiper .swiper-slide {
   width: 25%;
-  height: 100%;
+  height: 100%;  
   opacity: 0.4;
 }
 
 .mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
+  opacity: 1
 }
 
 .swiper-slide img {
@@ -38,23 +31,109 @@
   object-fit: cover;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
+.mySwiper .swiper-slide-active {
+  height: initial
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.knives-type-slider-container, .knives-type-details {
+  max-width: 754px;
+  width: 50%;
 }
 
-.swiper-slide img {
-  display: block;
+/* knives type main page */
+.knives-type-page {
+  /* margin: 30px 4%; */
+  margin: 30px 8.2%;
+}
+
+.knives-type-wrapp  { max-width: 1560px }
+
+.knives-type-details {
+  background: var(--FEFEFE);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 806px;
+}
+
+.knives-type-title-wrapp {
+  border-bottom: 1px solid var(--14141426);
+}
+
+.knives-type-title { margin-bottom: 15px }
+
+.knives-type-title > :first-child {
+  width: 60%;
+}
+
+.knives-type-title > :last-child {
+  width: 40%;
+}
+
+.knives-title-item h2 {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  font-weight: 700;
+  font-size: var(--fsz24);
+  color: var(--darkBlack);
+  line-height: 29px;
+  margin-right: 15px;
+}
+
+.rating-star button {  margin: 0 5px }
+
+.rating-star > button img {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+}
+
+.knives-title-item button {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.scales-svg {
+  width: 27px;
+  height: 25.57px;
+}
+
+.heart-svg {
+  width: 27.22px;
+  height: 24.29px;
+  margin-left: 30px;
+}
+
+.knives-title-link { 
+  color: var(--24AD53);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19.5px;
+}
+
+.knives-type-series-details { 
+  padding: 25px 0 30px;
+  border-bottom: 1px solid var(--14141426);
+}
+.knives-type-series-details :first-child p,
+.knives-type-series-details :last-child p {
+  font-weight: 500;
+  line-height: 22px;
+  font-size: var(--fsz18);
+  margin-bottom: var(--mb-20);
+}
+
+.knives-type-series-details :first-child p {
+  color: var(--darkBlack);
+  margin-right: var(--mr-40);
+}
+
+.knives-type-series-details :last-child p { color: var(--141414Opacity50) }
+
+@media (width < 1400px) {
+  .knives-type-page { margin: 30px 4% }
+  /* .knives-type-wrapp {
+    padding-right: 4%;
+    padding-left: 4%;    
+  } */
 }

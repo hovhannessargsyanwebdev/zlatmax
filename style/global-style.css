@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+p { margin: 0; padding: 0}
+
 body { font-family: var(--fontMontserrat) }
 
 /* change scrollbar style */
@@ -26,6 +28,8 @@ ul { list-style: none}
   --white: #fff;
   --yellow: #E8AA31;
   --darkBlack: #141414;
+  --141414Opacity50: #14141480;
+  --14141426: #14141426;
   --greyWhite: #ECF1F2;
   --grey03: rgba(255, 255, 255, 0.3);
   --lightBlack: rgb(31, 28, 33);
@@ -35,13 +39,16 @@ ul { list-style: none}
   --greyOpacity50: rgba(4,4,4,.5);
   --lightGrey: rgba(7, 7, 7, .3);
   --040404: #040404;
+  --24AD53: #24AD53;
   --000001: rgba(0, 0, 0, 1);
+  --FEFEFE: #FEFEFE;
 
   /* font sizes */
   --fsz16: 16px;
   --fsz18: 18px;
   --fsz20: 20px;
   --fsz23: 23px;
+  --fsz24: 24px;
   --fw700: 700px;
   --fontMontserrat: 'Montserrat', sans-serif;
   --textDecorNone: none;
@@ -59,8 +66,8 @@ ul { list-style: none}
   --d-block: block;
   --d-inline-block: inline-block;
   --d-none: none;
-  --visibility: inline-block;
-  --visibility-hidden: none;
+  /* --visibility: inline-block;
+  --visibility-hidden: none; */
 
   /* widths */
   --w-100: 100%;
@@ -70,6 +77,7 @@ ul { list-style: none}
   --w-12rem: 12rem;
   --w-22rem: 22rem;
   --w-50rem: 50rem;
+  --w-100: 100%;
 
   /* margins */
   --mt-46: 46px;
@@ -77,8 +85,11 @@ ul { list-style: none}
   --ml-10: 10px;
   --ml-15: 15px;
   --mb-15: 15px;
+  --mb-20: 20px;
   --mb-30: 30px;
+  --mr-40: 40px;
   --mb-60: 60px;
+  --mb-35: 35px;
   --ml-6: 6%;
 
   --text-center: center;
@@ -94,7 +105,9 @@ ul { list-style: none}
 /* .as-baseiline {align-self: var(--as-baseline) } */
 .fb-42 { flex-basis: var(--fb-42) }
 .d-block { display: var(--d-block) }
+.d-inline-block { display: var(--d-inline-block) }
 .d-none {display: var(--d-none) }
+.w-100 { width: var(--w-100) }
 .w-50 { width: var(--w-50) }
 .w-38 { width: var(--w-38) }
 .w-12rem { width: var(--w-12rem) }
@@ -106,5 +119,6 @@ ul { list-style: none}
 .ml-15 { margin-left: var(--ml-15) }
 .mb-15 { margin-bottom: var(--mb-15) }
 .mb-30 { margin-bottom: var(--mb-30) }
+.mb-35 { margin-bottom: var(--mb-35) }
 .mb-60 { margin-bottom: var(--mb-60) }
 .ml-6 { margin-left: var(--ml-6) }

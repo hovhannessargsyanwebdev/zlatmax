@@ -27,6 +27,7 @@ nav a, nav ul {
 .nav-top-item a {
   margin-right: 15px;
 }
+.nav-top-item:last-child a { margin-right: 0 }
 
 .nav-nav {
   background: var(--greyWhite);
