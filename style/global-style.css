@@ -8,6 +8,19 @@ p { margin: 0; padding: 0}
 
 body { font-family: var(--fontMontserrat) }
 
+
+@media (width > 2200px) {
+  .sub-header-container, .nav-top, .nav-nav, .nav-list-wrapp  {
+    margin: 0 auto;
+    max-width: 2200px;
+  }
+  .knives-type-page {
+    margin: 30px auto !important;
+    max-width: 2000px;
+  }
+
+}
+
 /* change scrollbar style */
 body::-webkit-scrollbar { width: .5em }
  
@@ -28,6 +41,7 @@ ul { list-style: none}
   --white: #fff;
   --yellow: #E8AA31;
   --darkBlack: #141414;
+  --black: #000;
   --141414Opacity50: #14141480;
   --14141426: #14141426;
   --greyWhite: #ECF1F2;
@@ -44,11 +58,14 @@ ul { list-style: none}
   --FEFEFE: #FEFEFE;
 
   /* font sizes */
+  --fsz12: 12px;
+  --fsz14: 14px;
   --fsz16: 16px;
   --fsz18: 18px;
   --fsz20: 20px;
   --fsz23: 23px;
   --fsz24: 24px;
+  --fsz30: 30px;
   --fw700: 700px;
   --fontMontserrat: 'Montserrat', sans-serif;
   --textDecorNone: none;
@@ -71,9 +88,12 @@ ul { list-style: none}
 
   /* widths */
   --w-100: 100%;
+  --w-60: 60%;
   --w-50: 50%;
+  --w-45: 45%;
   --w-38: 38%;
   --w-22: 22%;
+  --w-28: 28%;
   --w-12rem: 12rem;
   --w-22rem: 22rem;
   --w-50rem: 50rem;
@@ -84,6 +104,7 @@ ul { list-style: none}
   --mr-5: 5px;
   --ml-10: 10px;
   --ml-15: 15px;
+  --mr-15: 15px;
   --mb-15: 15px;
   --mb-20: 20px;
   --mb-30: 30px;
@@ -108,8 +129,12 @@ ul { list-style: none}
 .d-inline-block { display: var(--d-inline-block) }
 .d-none {display: var(--d-none) }
 .w-100 { width: var(--w-100) }
+.w-60 { width: var(--w-60) }
 .w-50 { width: var(--w-50) }
+.w-45 { width: var(--w-45) }
 .w-38 { width: var(--w-38) }
+.w-28 { width: var(--w-28)}
+
 .w-12rem { width: var(--w-12rem) }
 .w-22rem { width: var(--w-22rem) }
 .text-center { text-align: var(--text-center) }
@@ -117,6 +142,7 @@ ul { list-style: none}
 .mr-5 { margin-right: var(--mr-5) }
 .ml-10 { margin-left: var(--ml-10) }
 .ml-15 { margin-left: var(--ml-15) }
+.mr-15 { margin-right: var(--mr-15) }
 .mb-15 { margin-bottom: var(--mb-15) }
 .mb-30 { margin-bottom: var(--mb-30) }
 .mb-35 { margin-bottom: var(--mb-35) }

@@ -16,6 +16,9 @@ const hamburgerList = document.querySelector('.hamburger-list')
 const navbarProductList = document.querySelector('.navbar-product-list')
 const navbarKnivesCatalog = document.querySelector('.navbar-knives-catalog')
 
+const knivesTypeSelect = document.querySelectorAll('.knives-type-select-item')
+// const knivesTypeSelect = document.getElementById('bbb')
+
 
 // show navbar nested items
 function showNavbarNestedItems(e) {
@@ -32,6 +35,7 @@ function showNavbarNestedItems(e) {
    
    hamburgerNavigationBack.classList.replace('d-none', 'd-flex')
 }
+
 
 function hamburgerOpen() { 
   navbarHamburgerContent.classList.remove('d-none')
@@ -87,6 +91,43 @@ const hideNavList = () => {
   hrBottom.classList.remove('d-block')  
 }
 
+const hideKnivesTypesList = (list) => list.classList.replace('d-block', 'd-none')
+
+const showKnivesTypesList = (list) => list.classList.replace('d-none', 'd-block')
+
+let toggleKnivesTypeList = 0
+let currentSelectList;
+const knivesTypeSelectSwitch = knivesTypeSelect.forEach((item) => {  
+  let closest = item.closest(".knives-type-select-item")
+  let targetEl = closest.children[1]
+  
+  item.addEventListener('click', (e) => {
+    if (targetEl.classList.contains('d-none')) {    
+      if (toggleKnivesTypeList <= 0) {    
+        showKnivesTypesList(targetEl)
+        toggleKnivesTypeList++
+        currentSelectList = targetEl
+      }
+      if (currentSelectList.classList.contains('select-opt-list')) {
+        let currentSelectText = currentSelectList.parentNode.children[0].childNodes[1]
+        Array.from(currentSelectList.children).forEach((item, i) => {
+          item.addEventListener('click', (e) => {
+            currentSelectText.innerHTML = item.textContent
+            currentSelectText.classList.toggle('change-text-style')
+          })
+        })
+      }
+    }
+
+    else if (targetEl.classList.contains('d-block')) {
+      hideKnivesTypesList(targetEl)
+      toggleKnivesTypeList--        
+    }
+  })
+})
+
+
+
 hamburgerBtn.addEventListener('click', hamburgerOpen)
 body.addEventListener('click', hamburgerClose, true)
 closeHamburgerBtn.addEventListener('click', hamburgerClose, true)
@@ -97,10 +138,3 @@ navList.addEventListener('mouseout', hideNavList)
 navbarLinkCatalog.addEventListener('click', showNavbarNestedItems)
 navbarLinkKnives.addEventListener('click', showNavbarNestedItems)
 hamburgerNavigationBack.addEventListener('click', resetNavbarPathLink)
-
-
-
-
-
-
-
