@@ -518,6 +518,11 @@
   margin-right: var(--mr-30);
 }
 
+.region-post-item .currency {
+  width: 10px;
+  height: 15px;
+}
+
 
 
 @media (width < 1700px) {
