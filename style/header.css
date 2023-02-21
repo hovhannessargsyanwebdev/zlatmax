@@ -1,3 +1,8 @@
+/* header {
+  height: 100vh;
+  background: var(--1e2323);
+} */
+
 .navbar-down-992 { display: none } /* turn off mobile navbar*/
 
 nav { background: var(--darkBlack) }
@@ -116,12 +121,27 @@ nav a, nav ul {
 .nav-details-favorite img {
   width: 28px;
   height: 26.58px;
+  cursor: pointer;
 }
+
+.nav-details-basket { position: relative }
 
 .nav-details-basket img {
   width: 37px;  
   height: 35.33px;
   margin: 0 8px;
+  cursor: pointer;
+}
+
+.nav-basket-count-icon {
+  position: absolute;
+  top: -3px;
+  left: 33px;
+  padding: 2px 4px;
+  border-radius: 50%;
+  font-size: var(--fsz10);
+  background: var(--yellow);
+  color: var(--white);
 }
 
 .nav-details-order span, .nav-details-order a {
@@ -223,14 +243,15 @@ nav a, nav ul {
 }
 
 .sub-header {
-  background: var(--1e2323);
+  background-color: var(--1e2323);
   color: var(--white);
   font-weight: 500;
-  min-height: calc(100vh - 14.375em);
-  /* background: url(../img/header/svg/Mask-Group.svg);
-  background-repeat: no-repeat; */
-  /* height: 100vh; */
-  background-position: center, center;
+  /* background-image: url(../img/header/svg/bg-subheader-0.svg),
+  url(../img/header/svg/bg-subheader-1.svg),
+  url(../img/header/svg/bg-subheader-2.svg),
+  url(../img/header/svg/rectangle.svg); */
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .sub-header-container {
@@ -291,20 +312,18 @@ nav a, nav ul {
 }
 
 .change-subHeader-margin {
-  /* margin-top: -602px; */
-  /* margin-top: calc(100vh - 1920px); */
-  margin-top: calc(100vh - 1432px);
- 
-   z-index: -1;
+  /* margin-top: calc(100vh - 1432px); */
+  margin-top: calc(100% - 2144px); 
+  z-index: -1;
   position: relative;
  }
 
 @media (width > 2200px) {
-  .sub-header {
-    min-height: calc(100vh - 40.375em);
-  }
   .change-subHeader-margin {
-    margin-top: calc(100vh - 1637px);
+    /* margin-top: calc(100vh - 1637px); */
+    /* margin-top: calc(100% - 2687px); */
+    margin-top: 0;
+    /* ? or margin-top: calc(100% - 104%); */
   }
 }
 
@@ -324,6 +343,8 @@ nav a, nav ul {
 }
 
 @media (width < 1400px) {
+  .change-subHeader-margin { margin-top: calc(100% - 1676px) }
+
   .nav-top-item:first-child {
     width: var(--w-50);
   }
@@ -553,4 +574,5 @@ nav a, nav ul {
     padding: 3% 5%;
   }
 }
+
 

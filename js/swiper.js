@@ -15,3 +15,10 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 
+var swiper3 = new Swiper(".swiper-subheader", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+})
+

@@ -17,7 +17,11 @@ const navbarProductList = document.querySelector('.navbar-product-list')
 const navbarKnivesCatalog = document.querySelector('.navbar-knives-catalog')
 
 const knivesTypeSelect = document.querySelectorAll('.knives-type-select-item')
-// const knivesTypeSelect = document.getElementById('bbb')
+
+const aboutKnivesTypeLinks = document.querySelector('.knives-type-character-title')
+const aboutKnivesTypeContent = document.querySelectorAll('.knives-type-character-container')
+
+const knivesTypeSelectsRegion = document.querySelector('.knives-type-select-group-wrapp')
 
 
 // show navbar nested items
@@ -96,7 +100,7 @@ const hideKnivesTypesList = (list) => list.classList.replace('d-block', 'd-none'
 const showKnivesTypesList = (list) => list.classList.replace('d-none', 'd-block')
 
 let toggleKnivesTypeList = 0
-let currentSelectList;
+let currentSelectList
 const knivesTypeSelectSwitch = knivesTypeSelect.forEach((item) => {  
   let closest = item.closest(".knives-type-select-item")
   let targetEl = closest.children[1]
@@ -127,6 +131,54 @@ const knivesTypeSelectSwitch = knivesTypeSelect.forEach((item) => {
 })
 
 
+const hideAboutKnivesContent = (oldItem, idx) => {
+  oldItem.classList.replace('knive-type-title-active','knive-type-title-no-active')
+  aboutKnivesTypeContent[idx].classList.replace('d-block', 'd-none')
+  
+}
+
+const showAboutKnivesContent = (targetLink, idx) => {
+  targetLink.classList.replace('knive-type-title-no-active', 'knive-type-title-active')
+  aboutKnivesTypeContent[idx].classList.replace('d-none', 'd-block')
+}
+
+let previousActiveItem = false
+let currentElIdx = null;
+const knivesDetailsSwitch = Array.from(aboutKnivesTypeLinks.children).forEach((item, i) => {
+  if (item.classList.contains('knive-type-title-active')) { currentElIdx = i }
+
+  item.addEventListener('click',(e) => {   
+    if (e.target !== aboutKnivesTypeLinks.children[0]) {
+      aboutKnivesTypeContent[0].classList.replace('d-block', 'd-none')
+      aboutKnivesTypeLinks.children[0].classList.replace('knive-type-title-active','knive-type-title-no-active')
+    }
+    
+    if (previousActiveItem) {
+      hideAboutKnivesContent(previousActiveItem, currentElIdx)    
+    }
+    
+    if (e.target.className === 'knive-type-title-active') return
+
+    else if (e.target.className !== 'knive-type-title-active') {
+      previousActiveItem = aboutKnivesTypeLinks.children[i] 
+      currentElIdx = i
+      showAboutKnivesContent(item, i)
+    }
+  })   
+})
+
+let switcher = -4
+const showPostImg = knivesTypeSelectsRegion.addEventListener('click', (e) => {    
+  document.querySelector('.select-region')
+  const postImgShow = document.querySelector('.region-post')
+  if (e.target.className === 'select-list-region') {
+    let currentItm = document.querySelectorAll('.knives-character-select-group .select-choose-text').forEach((item) => {
+      if (item.className != 'change-text-style') switcher++
+    })    
+  }
+  if (switcher >= 0) postImgShow.classList.replace('d-none', 'd-block')    
+}) 
+
 
 hamburgerBtn.addEventListener('click', hamburgerOpen)
 body.addEventListener('click', hamburgerClose, true)
@@ -138,3 +190,4 @@ navList.addEventListener('mouseout', hideNavList)
 navbarLinkCatalog.addEventListener('click', showNavbarNestedItems)
 navbarLinkKnives.addEventListener('click', showNavbarNestedItems)
 hamburgerNavigationBack.addEventListener('click', resetNavbarPathLink)
+
