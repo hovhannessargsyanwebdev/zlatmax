@@ -30,11 +30,16 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid var(--1e2323);
   border-radius: 10px;
   background: var(--1e2323);
+  min-height: 235px;
+}
+@media (width <= 992px) {
+  body::-webkit-scrollbar-thumb { min-height: 160px }
 }
 
 a { text-decoration: none } 
 
 ul { list-style: none}
+
 
 :root {
   /* colors */
@@ -115,6 +120,7 @@ ul { list-style: none}
   --ml-10: 10px;
   --ml-15: 15px;
   --ml-30: 30px;
+  --ml-60: 60px;
   --mr-30: 30px;
   --mr-15: 15px;
   --mb-10: 10px;
@@ -157,6 +163,9 @@ ul { list-style: none}
 .w-35 { width: var(--w-35) }
 .w-28 { width: var(--w-28) }
 
+.h-60 { height: 60% }
+.h-35 { height: 35% }
+
 .w-12rem { width: var(--w-12rem) }
 .w-22rem { width: var(--w-22rem) }
 .text-center { text-align: var(--text-center) }
@@ -167,6 +176,7 @@ ul { list-style: none}
 .ml-15 { margin-left: var(--ml-15) }
 .mr-30 { margin-right: var(--mr-30) }
 .ml-30 { margin-left: var(--ml-30) }
+.ml-60 { margin-left: var(--ml-60) }
 .mr-15 { margin-right: var(--mr-15) }
 .mb-15 { margin-bottom: var(--mb-15) }
 .mb-20 { margin-bottom: var(--mb-20) }
@@ -179,3 +189,6 @@ ul { list-style: none}
 .pb-30 { padding-bottom: var(--pb-30) }
 .p-30 { padding: var(--p-30) }
 .pb-0 { padding-bottom: var(--pb-0) }
+
+.ai-fs { align-items: start; }
+.ac-fs {align-content: flex-start}

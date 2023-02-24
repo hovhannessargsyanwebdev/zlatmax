@@ -1,4 +1,8 @@
+const logoLink = document.querySelectorAll('.nav-logo')
 const navList = document.querySelector('.nav-list-wrapp')
+const navListTitleLinks = document.querySelectorAll('.nav-list-title-item > a')
+const navListBottomLinks = document.querySelectorAll('.nav-list-bottom-link')
+
 const subHeader = document.querySelector('.sub-header')
 const hrTop = document.querySelector('.nav-list-hr-top')
 const hrBottom = document.querySelector('.nav-list-hr-bottom')
@@ -6,7 +10,7 @@ const navbarHamburgerContent = document.querySelector('.navbar-hamburger-wrapp')
 const hamburgerBtn = document.querySelector('.hamburger-btn');
 const closeHamburgerBtn = document.querySelector('.hamburger-close')
 const body = document.getElementsByTagName('body')[0]
-const stopSrollBody = document.querySelector('.stop-scroll-body')
+// const stopSrollBody = document.querySelector('.stop-scroll-body')
 
 const navbarLinkCatalog = document.getElementById('navbar-link-catalog')
 const navbarLinkKnives = document.getElementById('navbar-link-knives')
@@ -16,12 +20,18 @@ const hamburgerList = document.querySelector('.hamburger-list')
 const navbarProductList = document.querySelector('.navbar-product-list')
 const navbarKnivesCatalog = document.querySelector('.navbar-knives-catalog')
 
+const knivesTypePages = document.querySelector('.knives-type-page ')
 const knivesTypeSelect = document.querySelectorAll('.knives-type-select-item')
+
+const navHiddenList = document.querySelectorAll('.nav-list-item')
+// const knivesSelectHiddenItems = document.querySelectorAll('.select-opt-list')
 
 const aboutKnivesTypeLinks = document.querySelector('.knives-type-character-title')
 const aboutKnivesTypeContent = document.querySelectorAll('.knives-type-character-container')
 
 const knivesTypeSelectsRegion = document.querySelector('.knives-type-select-group-wrapp')
+
+const linkKnivesCuttingPage = document.querySelectorAll('.go-to-knives-cutting')
 
 
 // show navbar nested items
@@ -40,7 +50,6 @@ function showNavbarNestedItems(e) {
    hamburgerNavigationBack.classList.replace('d-none', 'd-flex')
 }
 
-
 function hamburgerOpen() { 
   navbarHamburgerContent.classList.remove('d-none')
   navbarHamburgerContent.classList.add('d-block')
@@ -50,24 +59,24 @@ function hamburgerOpen() {
 function hamburgerClose(e) {
   if (body.classList.contains('stop-scroll-body')) {
   if (
-    e.target.tagName !== 'A' &&
+    // e.target.className !== 'navbar-hamburger' && 
+    (e.target.tagName !== 'A' || e.target.className === 'go-to-knives-cutting') &&
+    e.target.className !== 'hamburger-close' &&
     e.target.tagName !== 'LI' &&
     e.target.tagName !== 'UL' &&
     !e.target.classList.contains('hamburger-navigation') &&
     !e.target.classList.contains('navbar-hamburger') &&
+    !e.target.classList.contains('hamburger-navigation-wrapp') &&
     !e.target.classList.contains('hamburger-back-icon') &&
     !e.target.classList.contains('hamburger-back-text')  &&
-    !e.target.classList.contains('hamburger-navigation-wrapp')  &&
     !e.target.classList.contains('hamburger-right-icon') &&
-    !e.target.closest('.hamburger-right-icon > img'))    
-    {
+    !e.target.closest('.hamburger-right-icon > img')) {
       navbarHamburgerContent.classList.replace('d-block', 'd-none')
       body.classList.remove('stop-scroll-body')
       resetNavbarPathLink()
     }
   }
 }
-
 
 function resetNavbarPathLink() {
   hamburgerNavigationBack.classList.add('d-none')
@@ -83,21 +92,82 @@ function resetNavbarPathLink() {
   navbarKnivesCatalog.classList.remove('d-block')
 }
 
-const showNavList = () => {
-  subHeader.classList.add('change-subHeader-margin')
-  hrTop.classList.add('d-block')
-  hrBottom.classList.add('d-block')
+const isShowNavbarLinksLists = (e) => {
+  if (hrBottom.classList.contains('d-block') && hrTop.classList.contains('d-block')) {
+    if (e.target.classList.contains('nav-top') &&
+      e.target.classList.contains('nav-nav') &&
+      e.target.classList.contains('nav-list-title') &&
+      e.target.classList.contains('nav-list-bottom-link') &&
+      e.target.classList.contains('nav-list-title-item')) {
+        return
+    } 
+    else {
+      hideNavbarLinksLists();
+      hideHeaderBorder()
+    }
+  }
 }
 
-const hideNavList = () => {
-  subHeader.classList.remove('change-subHeader-margin')
-  hrTop.classList.remove('d-block')
-  hrBottom.classList.remove('d-block')  
+const ShowNavbarLinksLists = navListTitleLinks.forEach((item) => {
+  item.addEventListener('click',(e) => {
+    navHiddenList.forEach((item) => {
+      item.classList.replace('d-none', 'd-block')           
+    })
+  
+    navListBottomLinks.forEach((item) => {
+      item.classList.replace('d-none', 'show-navbar-list')
+    })
+    showHeaderBorder()
+  })
+}) 
+
+function hideNavbarLinksLists () {
+  navHiddenList.forEach((item) => {
+  item.classList.replace('d-block', 'd-none')
+  })
+
+  navListBottomLinks.forEach((item) => {
+    item.classList.replace('show-navbar-list', 'd-none')
+  }) 
 }
 
-const hideKnivesTypesList = (list) => list.classList.replace('d-block', 'd-none')
+function showHeaderBorder () {
+  hrTop.classList.replace('d-none', 'd-block')
+  hrBottom.classList.replace('d-none', 'd-block')
+}
+
+function hideHeaderBorder () {
+  hrTop.classList.replace('d-block', 'd-none')
+  hrBottom.classList.replace('d-block', 'd-none')
+}
+
+
+const plusCounterElem = document.querySelector('.plus-counter')
+const minusCounterElem = document.querySelector('.minus-counter')
+let costProduct = document.querySelector('.text-cost')
+let initialProductVal = costProduct.innerText
+let showCount = document.querySelector('.show-count')
+let counter = 1 
+
+function counterCostPlus() {
+  counter++
+  showCount.textContent = counter
+  let currentCost = +initialProductVal.replace(' ', '') 
+  costProduct.textContent = currentCost * counter
+}
+
+function counterCostMinus() {
+  if (+showCount.textContent < 2) return
+  counter--
+  let sumPrpoductVal = +costProduct.innerText
+  showCount.textContent = counter
+  let currentCost = sumPrpoductVal - (+initialProductVal.replace(' ', ''))
+  costProduct.textContent = currentCost
+}
 
 const showKnivesTypesList = (list) => list.classList.replace('d-none', 'd-block')
+
+const hideKnivesTypesList = (list) => list.classList.replace('d-block', 'd-none')
 
 let toggleKnivesTypeList = 0
 let currentSelectList
@@ -115,7 +185,7 @@ const knivesTypeSelectSwitch = knivesTypeSelect.forEach((item) => {
       if (currentSelectList.classList.contains('select-opt-list')) {
         let currentSelectText = currentSelectList.parentNode.children[0].childNodes[1]
         Array.from(currentSelectList.children).forEach((item, i) => {
-          item.addEventListener('click', (e) => {
+          item.addEventListener('click', () => {
             currentSelectText.innerHTML = item.textContent
             currentSelectText.classList.toggle('change-text-style')
           })
@@ -125,16 +195,14 @@ const knivesTypeSelectSwitch = knivesTypeSelect.forEach((item) => {
 
     else if (targetEl.classList.contains('d-block')) {
       hideKnivesTypesList(targetEl)
-      toggleKnivesTypeList--        
+      toggleKnivesTypeList--   
     }
   })
 })
 
-
 const hideAboutKnivesContent = (oldItem, idx) => {
   oldItem.classList.replace('knive-type-title-active','knive-type-title-no-active')
-  aboutKnivesTypeContent[idx].classList.replace('d-block', 'd-none')
-  
+  aboutKnivesTypeContent[idx].classList.replace('d-block', 'd-none')    
 }
 
 const showAboutKnivesContent = (targetLink, idx) => {
@@ -179,15 +247,44 @@ const showPostImg = knivesTypeSelectsRegion.addEventListener('click', (e) => {
   if (switcher >= 0) postImgShow.classList.replace('d-none', 'd-block')    
 }) 
 
+const showKnivesCuttingPage = linkKnivesCuttingPage.forEach((item) => {
+  item.addEventListener('click', () => {   
+    if (knivesTypePages.classList.contains('d-none')) {
+      knivesTypePages.classList.replace('d-none', 'd-block')      
+      subHeader.classList.replace('d-block', 'd-none')
+    }
+    hamburgerClose()
+    hideNavbarLinksLists()
+    hideHeaderBorder()
+  })
+})
+
+const backToMainPage = logoLink.forEach((link) => {
+  link.addEventListener('click', () => {
+    knivesTypePages.classList.replace('d-block', 'd-none')
+    subHeader.classList.replace('d-none', 'd-block')
+  })
+  resetAll()
+})
+
+function resetAll() {
+  hamburgerClose()
+  resetNavbarPathLink()
+  hideNavbarLinksLists()  
+  hideHeaderBorder()
+}
 
 hamburgerBtn.addEventListener('click', hamburgerOpen)
 body.addEventListener('click', hamburgerClose, true)
+body.addEventListener('click', isShowNavbarLinksLists, true)
 closeHamburgerBtn.addEventListener('click', hamburgerClose, true)
-
-navList.addEventListener('mousemove', showNavList)
-navList.addEventListener('mouseout', hideNavList)
 
 navbarLinkCatalog.addEventListener('click', showNavbarNestedItems)
 navbarLinkKnives.addEventListener('click', showNavbarNestedItems)
 hamburgerNavigationBack.addEventListener('click', resetNavbarPathLink)
+
+plusCounterElem.addEventListener('click', counterCostPlus)
+minusCounterElem.addEventListener('click', counterCostMinus)
+
+
 

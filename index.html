@@ -9,18 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="style.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  
   <link rel="stylesheet" href="style/header.css">
   <link rel="stylesheet" href="style/global-style.css">
   <link rel="stylesheet" href="style/knives-type-page.css">
   <link rel="stylesheet" href="./style.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-  <!-- <script src="./script.js" defer></script> -->
+
+
   <script src="js/main.js" defer></script>
-  <script src="js/swiper.js" defer></script>
+  <!-- <script src="js/swiper.js" defer></script> -->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-element-bundle.min.js" defer></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js" defer></script>
 </head>
 <body>
   <header>
@@ -99,15 +100,15 @@
         </div>
 
         <div class="nav-list-wrapp navbar-lg">
-          <span class="nav-list-hr-top"></span>
-          <span class="nav-list-hr-bottom"></span>
+          <span class="nav-list-hr-top d-none"></span>
+          <span class="nav-list-hr-bottom d-none"></span>
           <ul class="nav-list-title d-flex jc-sb">
             <li class="nav-list-title-item">
-              <a href="#" class="a"> Catalog of knives</a>
-              <ul class="nav-list-item">
+              <a href="#"> Catalog of knives</a>
+              <ul class="nav-list-item d-none">
                 <li class="nav-list-subtitle-item">Knife category</li>
                 <li class="nav-list-item-link">
-                  <a href="#">Cutting knives</a>
+                  <a href="#" class="go-to-knives-cutting">Cutting knives</a>
                 </li>
                 <li class="nav-list-item-link">
                   <a href="#">Tourist knives</a>
@@ -138,7 +139,7 @@
 
             <li class="nav-list-title-item">
                 <a href="#">Bladed weapons</a>              
-              <ul class="nav-list-item">
+              <ul class="nav-list-item d-none">
                 <li class="nav-list-subtitle-item">Production of knives</li>
 
                 <li class="nav-list-item-link">
@@ -175,8 +176,8 @@
             </li>
 
             <li class="nav-list-title-item">
-                <a href="#">Souvenir products</a>
-              <ul class="nav-list-item">
+                <a href="#" >Souvenir products</a>
+              <ul class="nav-list-item d-none">
                 <li class="nav-list-subtitle-item">Knives by steel grades</li>
 
                 <li class="nav-list-item-link">
@@ -214,7 +215,7 @@
 
             <li class="nav-list-title-item">
               <a href="#">flashlights ARMYTEK</a>             
-              <ul class="nav-list-item">
+              <ul class="nav-list-item d-none">
                 <li class="nav-list-subtitle-item"> Sharpening and polishing of knives</li>
                 <li class="nav-list-item-link">
                   <a href="#">GOI Paste</a>
@@ -233,7 +234,7 @@
 
             <li class="nav-list-title-item">
               <a href="#">Related products</a>              
-              <ul class="nav-list-item">
+              <ul class="nav-list-item d-none">
                 <li class="nav-list-subtitle-item">Knife workshop</li>
 
                 <li class="nav-list-item-link">
@@ -357,7 +358,7 @@
               <!-- link to catalog of Knives -->
               <ul class="navbar-knives-catalog d-none">
                 <li class="hamburger-list-link">
-                  <a href="#">Cutting knives</a>
+                  <a href="#" class="go-to-knives-cutting">Cutting knives</a>
                 </li>
 
                 <li class="hamburger-list-link">
@@ -430,14 +431,14 @@
             </div>
           </div>
     
-          <div class="navbar-mobile-nav">
+          <div class="navbar-mobile-nav nav-logo">
             <img src="img/header/svg/navbar-mobile-logo.svg" alt="">
           </div>
         </div>
       </div>
     </nav>  
 
-    <div class="sub-header">
+    <div class="sub-header d-block">
       <div class="sub-header-container">
 
         <div class="sub-header-wrapp mb-60">
@@ -476,17 +477,17 @@
     </div>
   </header>
 
-  <div class="knives-type-page">
+  <div class="knives-type-page d-none">
     <p class="knives-type-page-path-link">
       Main
-      <span class="arrow-left"> > </span>
+      <span class="arrow-left "> > </span>
       Cutting knives 
       <span class="arrow-left"> > </span>     
       <span class="last-path-link"> Bullfinch Knife</span>
     </p>
 
-    <div class="knives-type-wrapp d-flex jc-sb">      
-      <div class="knives-type-slider-container">
+    <div class="knives-type-wrapp d-flex jc-sb"> 
+      <!-- <div class="knives-type-slider-container">
         <div class="swiper mySwiper2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -534,7 +535,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="knives-type-details ml-1">
         <div class="knives-type-title-wrapp">
@@ -694,9 +695,9 @@
 
           <div class="knives-type-details-buy-item d-flex jc-sb">
             <div class="knives-type-counter-btn d-flex">
-              <button>-</button>
-              <button>0</button>
-              <button>+</button>
+              <button class="minus-counter">-</button>
+              <p class="show-count">1</p>
+              <button class="plus-counter">+</button>
             </div>
 
             <div class="knives-type-buy-buttons d-flex">
@@ -722,20 +723,20 @@
       </div> 
       <div class="knives-type-character-container d-block w-95">
         <p>A light, convenient knife with a blade having gentle
-           concave lenticular descents two-thirds of the width of the blade,
-           forming a thin, perfectly cutting blade with a thickness of about
-           0.6 mm in the area of the drains.
+            concave lenticular descents two-thirds of the width of the blade,
+            forming a thin, perfectly cutting blade with a thickness of about
+            0.6 mm in the area of the drains.
         </p>
         <br>
         <p>The butt of the blade with the back of the handle has one smooth arc-shaped line.
-           On the heel in front of the handle there is 
-           a sub-finger cutout for precise work.
+            On the heel in front of the handle there is 
+            a sub-finger cutout for precise work.
         </p>
         <br>
         <p>
           It is necessary to exercise some caution when working with large lateral loads
-           on the blade of the knife, due to the small thickness of the blade
-           in the working part.
+            on the blade of the knife, due to the small thickness of the blade
+            in the working part.
         </p>
         <br>
         <p>
@@ -840,7 +841,7 @@
 
             <div class="knives-type-feedback-text mb-20">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 Tortor luctus et consectetur augue. Dolor egestas nunc pellentesque
+                  Tortor luctus et consectetur augue. Dolor egestas nunc pellentesque
                   hac fringilla. Enim ac scelerisque eu tellus feugiat vel. Ut ac 
                   nec eleifend fermentum dictum ullamcorper phasellus at sed.
               </p>
@@ -878,7 +879,7 @@
 
             <div class="knives-type-feedback-text mb-20">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 Tortor luctus et consectetur augue. Dolor egestas nunc pellentesque
+                  Tortor luctus et consectetur augue. Dolor egestas nunc pellentesque
                   hac fringilla. Enim ac scelerisque eu tellus feugiat vel. Ut ac 
                   nec eleifend fermentum dictum ullamcorper phasellus at sed.
               </p>
@@ -934,21 +935,31 @@
               <p>Russian post</p>
             </div>
 
-            <div>
+            <div class="d-flex">
               <p>5-8 days</p>
-              <p>300 
-                <span>
-                  <img class="currency" src="img/knives-type/svg/Vector-rub.svg" alt="">
-                </span>
-              </p>
+              <div class="d-flex ai-c">
+                <p class="ml-60">300</p>
+                <img class="currency ml-10" src="img/knives-type/svg/Vector-rub.svg" alt="">
+              </div>
             </div>           
           </div>
 
-          <div class="region-post-item d-flex ai-c">
-            <img src="img/knives-type/svg/Russian_Post.svg" alt="">
-            <p>Russian post</p>
-          </div>
+          <div class="region-post-item d-flex ai-c jc-sb mt-30">
+            <div>
+              <img src="img/knives-type/svg/Russian_Post.svg" alt="">
+              <p>Russian post</p>
+            </div>
+
+            <div class="d-flex">
+              <p>5-8 days</p>
+              <div class="d-flex ai-c">
+                <p class="ml-60">300</p>
+                <img class="currency ml-10" src="img/knives-type/svg/Vector-rub.svg" alt="">
+              </div>
+            </div>           
+          </div>        
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -956,380 +967,380 @@
   <!-- Levon part -->
   <div class="main-part">
     <div class="types">
-        <div class="types-1">
-        <div class="type-list list-1">
-            <div class="type-text">
-            <h2>Knife catalog</h2>
-            <hr>
-            <ul>
-                <li>Chopping</li>
-                <li>Tourist</li>
-                <li>Hunting</li>
-            </ul>
-            </div>
-            <img src="./images/knife1.png" alt="">
-        </div>
-        <div class="type-list list-2">
-            <div class="type-text">
+      <div class="types-1">
+      <div class="type-list list-1">
+          <div class="type-text">
+          <h2>Knife catalog</h2>
+          <hr>
+          <ul>
+              <li>Chopping</li>
+              <li>Tourist</li>
+              <li>Hunting</li>
+          </ul>
+          </div>
+          <img src="./images/knife1.png" alt="">
+      </div>
+      <div class="type-list list-2">
+          <div class="type-text">
 
-            
-            <h2>Medium blade weapons</h2>
-            <hr>
-            <ul>
-                <li>Chopping</li>
-                <li>Tourist</li>
-                <li>Hunting</li>
-            </ul>
-            </div>
-            <img src="./images/knife2.png" alt="">            </div>
+          
+          <h2>Medium blade weapons</h2>
+          <hr>
+          <ul>
+              <li>Chopping</li>
+              <li>Tourist</li>
+              <li>Hunting</li>
+          </ul>
+          </div>
+          <img src="./images/knife2.png" alt="">            </div>
 
-                    <div class= "type-list list-3">
-                    <div class="type-text">
+                  <div class= "type-list list-3">
+                  <div class="type-text">
 
-                
-            <h2>Knife catalog</h2>
-            <hr>
-            <ul>
-                <li>Chopping</li>
-                <li>Tourist</li>
-                <li>Hunting</li>
-            </ul>
+              
+          <h2>Knife catalog</h2>
+          <hr>
+          <ul>
+              <li>Chopping</li>
+              <li>Tourist</li>
+              <li>Hunting</li>
+          </ul>
 
-</div> 
-        <img src="./images/knife3.png" alt="">
-        </div>
+    </div> 
+      <img src="./images/knife3.png" alt="">
+      </div>
     </div>
-        <div class="types-2">
-            <div class="type-list list-4">
-                <div class="type-text">
+      <div class="types-2">
+          <div class="type-list list-4">
+              <div class="type-text">
 
-                
-                <h2>Souvenirs</h2>
-                <hr>
-                <ul>
-                    <li>Chopping</li>
-                    <li>Tourist</li>
-                    <li>Hunting</li>
-                </ul>
-                </div>
-                <img src="./images/knife4.png" alt="">
-            </div>
-            <div class="type-list list-5">
-                <div class="type-text">
+              
+              <h2>Souvenirs</h2>
+              <hr>
+              <ul>
+                  <li>Chopping</li>
+                  <li>Tourist</li>
+                  <li>Hunting</li>
+              </ul>
+              </div>
+              <img src="./images/knife4.png" alt="">
+          </div>
+          <div class="type-list list-5">
+              <div class="type-text">
 
-                
-                <h2>Related products</h2>
-                <hr>
-                <ul>
-                    <li>Chopping</li>
-                    <li>Tourist</li>
-                    <li>Hunting</li>
-                </ul>
-                </div>
-                <img src="./images/knife5.png" alt="">            </div>
+              
+              <h2>Related products</h2>
+              <hr>
+              <ul>
+                  <li>Chopping</li>
+                  <li>Tourist</li>
+                  <li>Hunting</li>
+              </ul>
+              </div>
+              <img src="./images/knife5.png" alt="">            </div>
 
-                        <div class="type-list list-6">
-        
-        <div class="type-text">
+                      <div class="type-list list-6">
+      
+      <div class="type-text">
 
-                    <h2>Knife workshop</h2>
-                <hr>
-                <ul>
-                    <li>Chopping</li>
-                    <li>Tourist</li>
-                    <li>Hunting</li>
-        
-        </div>       </ul>
-                <img src="./images/knife6.png" alt="">
-            </div>
-        </div>
+                  <h2>Knife workshop</h2>
+              <hr>
+              <ul>
+                  <li>Chopping</li>
+                  <li>Tourist</li>
+                  <li>Hunting</li>
+      
+      </div>       </ul>
+              <img src="./images/knife6.png" alt="">
+          </div>
+      </div>
     </div>
     <div class="hits">
-        <h1>Bestsellers</h1>
-        
-        <swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
-        slides-per-view="4">
-        <swiper-slide class="knife"> 
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+      <h1>Bestsellers</h1>
+      
+      <swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
+      slides-per-view="4">
+      <swiper-slide class="knife"> 
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img id="Liked" src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+                      <img id="Liked" src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
     </swiper-slide>
-        <swiper-slide class="knife"> 
-        
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+      <swiper-slide class="knife"> 
+      
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
     </swiper-slide>
     <swiper-slide class="knife"> 
-        
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+      
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
     </swiper-slide>
-        <swiper-slide class="knife">  
-    
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+      <swiper-slide class="knife">  
+
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
     </swiper-slide>
-        <swiper-slide class="knife">
-            
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-            </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+      <swiper-slide class="knife">
+          
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+          </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
     </swiper-slide>
-        <swiper-slide class="knife">
-            
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+      <swiper-slide class="knife">
+          
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
-    
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
+
     </swiper-slide>
     <swiper-slide class="knife">
-            
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
+          
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
 
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
 
-</swiper-slide>
+    </swiper-slide>
     </swiper-container>
     <div class=" knife-list res">
 
@@ -1338,2987 +1349,2987 @@
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
     </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
-</div>
+    </div>
     <div class="knife">
-        
+      
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
-        </div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+      </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
-</div>
+    </div>
     <div class="knife">
-        
+      
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
     </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
 
-</div>
-<div class="knife">
-        
+    </div>
+    <div class="knife">
+      
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
     </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
 
-</div>
-</div>
+    </div>
+    </div>
 
-        
+      
 
-</div>
-<div class="new">
+    </div>
+    <div class="new">
     <div class="new-text">
-        <h1>New</h1>
-        <p>Welcome to the official website of ZLATMAX! Our store offers the widest selection of Zlatoust knives from Zlatoust Arms Factories and companies, we are official suppliers.</p>
-        <p><a href="#">
-            More news >
-        </a></p>
+      <h1>New</h1>
+      <p>Welcome to the official website of ZLATMAX! Our store offers the widest selection of Zlatoust knives from Zlatoust Arms Factories and companies, we are official suppliers.</p>
+      <p><a href="#">
+          More news >
+      </a></p>
     </div>
     <swiper-container class="mySwiper new-knifes knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
     slides-per-view="3">
 
     <swiper-slide class="knife"> 
-    
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
-    </swiper-slide>
-<swiper-slide class="knife"> 
-    
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
-    <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
     </swiper-slide>
     <swiper-slide class="knife"> 
-    
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="knife"> 
+
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
     </swiper-slide>
     <swiper-slide class="knife">
-        
+      
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
-        </div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+      </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
-</swiper-slide>
+    </swiper-slide>
     <swiper-slide class="knife">
-        
+      
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
     </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
 
-</swiper-slide>
-<swiper-slide class="knife">
-        
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
     </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
 
-</swiper-slide>
+    </swiper-slide>
 
 
-</swiper-container>
+    </swiper-container>
     <div class="knife-list res new-knifes">
-        <div class="knife">
-            <img src="./images/main-knife.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-            </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
+      <div class="knife">
+          <img src="./images/main-knife.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+          </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
 
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                                
-                            
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        </div>
-        <div class="knife">
-            <img src="./images/main-knife.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-            </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                              
+                          
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      </div>
+      <div class="knife">
+          <img src="./images/main-knife.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+          </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
 
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                                
-                            
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        </div>
-        <div class="knife">
-            <img src="./images/main-knife.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-            </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                              
+                          
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      </div>
+      <div class="knife">
+          <img src="./images/main-knife.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+          </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
 
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                                
-                            
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        </div>
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                              
+                          
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      </div>
     </div>
-</div>
-<div class="promo">
-    <div class="promo-text">
-    <h1>Promotions</h1>
-    <div class="promo-mini-text"><a href="#"><p>All promotions</p>
-    <span>></span></a></div>
-</div>
-<swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
-slides-per-view="4">
-<swiper-slide class="knife"> 
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
     </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife"> 
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
+    <div class="promo">
+      <div class="promo-text">
+      <h1>Promotions</h1>
+      <div class="promo-mini-text"><a href="#"><p>All promotions</p>
+      <span>></span></a></div>
     </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife"> 
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">  
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-    </div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-
-</swiper-slide>
-</swiper-container>
-<div class=" knife-list res">
-
-<div class="knife">  
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-
-</div>
-</div>
-
-</div>
-
-<div class="promo">
-    <div class="promo-text">
-
-    <h1>Promotions</h1>
-    <div class="promo-mini-text"><a href="#"><p>All promotions</p>
-    <span>></span></a></div>
-</div>
-<swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
-slides-per-view="4">
-<swiper-slide class="knife"> 
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife"> 
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife"> 
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">  
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-    </div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-
-</swiper-slide>
-</swiper-container>
-<div class=" knife-list res">
-
-<div class="knife">  
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="new">
-    <div class="new-text">
-        <h1>New</h1>
-        <p>Welcome to the official website of ZLATMAX! Our store offers the widest selection of Zlatoust knives from Zlatoust Arms Factories and companies, we are official suppliers.</p>
-        <p><a href="#">
-            More news >
-        </a></p>
-    </div>
-    <swiper-container class="mySwiper new-knifes knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
-    slides-per-view="3">
-
+    <swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
+    slides-per-view="4">
     <swiper-slide class="knife"> 
-    
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
-    </swiper-slide>
-<swiper-slide class="knife"> 
-    
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
-    <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
     </swiper-slide>
     <swiper-slide class="knife"> 
-    
-        <img src="./images/main-knife.png" alt="">
-        <h3>Knife Fox</h3>
-        <div>
-            <p>95x18</p>
-            <p>Walnut, Aluminum</p>
-        </div>
-        <div>
-            <div class="stars">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-                <img src="./svgs/star.svg" alt="">
-    
-            </div>
-            <p>12 reviews</p>
-        </div>
-        <hr>
-        <div class="price">
-                <h3>37,33$</h3>
-                <div class="liked">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
     <img src="./svgs/fav.svg" alt="">
-                        <img src="./svgs/like.svg" alt="">
-                            
-                        
-                </div>
-                
-        </div>
-        <div class="add">
-            <button>
-                <div class="buy">
-                    <p>Add to cart</p>
-                    <img src="./svgs/buy.svg" alt="">
-                        
-                </div>
-            </button>
-        </div>
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife"> 
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">  
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
     </swiper-slide>
     <swiper-slide class="knife">
-        
+      
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
-        </div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+      </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
-</swiper-slide>
+    </swiper-slide>
     <swiper-slide class="knife">
-        
+      
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
     </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
 
-</swiper-slide>
-<swiper-slide class="knife">
-        
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
     <img src="./images/main-knife.png" alt="">
     <h3>Knife Fox</h3>
     <div>
-        <p>95x18</p>
-        <p>Walnut, Aluminum</p>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
     </div>
     <div>
-        <div class="stars">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
-            <img src="./svgs/star.svg" alt="">
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
 
-        </div>
-        <p>12 reviews</p>
+      </div>
+      <p>12 reviews</p>
     </div>
     <hr>
     <div class="price">
-            <h3>37,33$</h3>
-            <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                    <img src="./svgs/like.svg" alt="">
-                        
-                    
-            </div>
-            
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
     </div>
     <div class="add">
-        <button>
-            <div class="buy">
-                <p>Add to cart</p>
-                <img src="./svgs/buy.svg" alt="">
-                    
-            </div>
-        </button>
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
     </div>
 
-</swiper-slide>
+    </swiper-slide>
+    </swiper-container>
+    <div class=" knife-list res">
 
+    <div class="knife">  
 
-</swiper-container>
-    <div class="knife-list res new-knifes">
-        <div class="knife">
-            <img src="./images/main-knife.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-            </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                                
-                            
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        </div>
-        <div class="knife">
-            <img src="./images/main-knife.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-            </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                                
-                            
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        </div>
-        <div class="knife">
-            <img src="./images/main-knife.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-            </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                                
-                            
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="promo">
-    <div class="promo-text">
-
-    <h1>Promotions</h1>
-    <div class="promo-mini-text"><a href="#"><p>All promotions</p>
-    <span>></span></a></div>
-</div>
-<swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
-slides-per-view="4">
-<swiper-slide class="knife"> 
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife"> 
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife"> 
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">  
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
     <p>95x18</p>
     <p>Walnut, Aluminum</p>
     </div>
-<div>
+    <div>
     <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
 
     </div>
     <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
     <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
     </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
     </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
     </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
+    <div class="knife">
 
-</swiper-slide>
-</swiper-container>
-<div class=" knife-list res">
-
-<div class="knife">  
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="promo">
-    <div class="promo-text">
-
-    <h1>Promotions</h1>
-    <div class="promo-mini-text"><a href="#"><p>All promotions</p>
-    <span>></span></a></div>
-</div>
-<swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
-slides-per-view="4">
-<swiper-slide class="knife"> 
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife"> 
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife"> 
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">  
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-    <p>95x18</p>
-    <p>Walnut, Aluminum</p>
-</div>
-<div>
-    <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-
-    </div>
-    <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
-    <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
-    </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
     <p>95x18</p>
     <p>Walnut, Aluminum</p>
     </div>
-<div>
+    <div>
     <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
 
     </div>
     <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
     <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
     </button>
-</div>
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
+    </div>
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
     <p>95x18</p>
     <p>Walnut, Aluminum</p>
-</div>
-<div>
+    </div>
+    <div>
     <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
 
     </div>
     <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
     <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
     </button>
-</div>
+    </div>
 
-</swiper-slide>
-<swiper-slide class="knife">
-    
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
     <p>95x18</p>
     <p>Walnut, Aluminum</p>
-</div>
-<div>
+    </div>
+    <div>
     <div class="stars">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
-        <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
 
     </div>
     <p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-        <h3>37,33$</h3>
-        <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-                <img src="./svgs/like.svg" alt="">
-                    
-                
-        </div>
-        
-</div>
-<div class="add">
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
     <button>
-        <div class="buy">
-            <p>Add to cart</p>
-            <img src="./svgs/buy.svg" alt="">
-                
-        </div>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
     </button>
-</div>
-
-</swiper-slide>
-</swiper-container>
-<div class=" knife-list res">
-
-<div class="knife">  
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-                
-            
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-
-</div>
-<div class="knife">
-
-<img src="./images/main-knife.png" alt="">
-<h3>Knife Fox</h3>
-<div>
-<p>95x18</p>
-<p>Walnut, Aluminum</p>
-</div>
-<div>
-<div class="stars">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-    <img src="./svgs/star.svg" alt="">
-
-</div>
-<p>12 reviews</p>
-</div>
-<hr>
-<div class="price">
-    <h3>37,33$</h3>
-    <div class="liked">
-<img src="./svgs/fav.svg" alt="">
-            <img src="./svgs/like.svg" alt="">
-    </div>
-    
-</div>
-<div class="add">
-<button>
-    <div class="buy">
-        <p>Add to cart</p>
-        <img src="./svgs/buy.svg" alt="">
-            
-    </div>
-</button>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="articles">
-    <h1>Our articles</h1>
-    <div class="article-list">
-    <div class="single-article">
-        <img src="images/art-1.png" alt="">
-        <div class="article-text">
-        <h3> All about knives: how to choose the right one</h3>
-        <p>24.07.2019</p>
-    </div>
-    </div>
-    <div class="single-article">
-        <img src="images/art-2.png" alt="">
-        <div class="article-text">
-        <h3>How to choose the right flashlight</h3>
-        <p>24.07.2019</p>
-    </div>
-    </div>
-    <div class="single-article">
-        <img src="images/art-3.png" alt="">
-        <div class="article-text">
-        <h3>Kitchen knives for housewives</h3>
-        <p>24.07.2019</p>
-    </div>
-    </div>
-    <div class="single-article">
-        <img src="images/art-4.png" alt="">
-        <div class="article-text">
-        <h3>Kitchen knives for housewives</h3>
-        <p>24.07.2019</p>
-    </div>
-    </div> 
-</div>
-</div>
-<div class="lanterns">
-    <div class="lantern-list">
-    <div class="single-lantern">
-        <div class="lantern-text">
-            <h3>Tactical Flashlights</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit.</p>
-                <button class="no-res-but">
-                    <p>More</p>
-                </button>
-        </div>
-        <img src="images/lant-1.png" alt="">
-        <button class="res-but">
-            <p>More</p>
-        </button>
-    </div>
-    <div class="single-lantern">
-        <div class="lantern-text">
-            <h3>Deck multi-flashlights</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, 
-                consectetur adipiscing elit.</p>
-            <button class="no-res-but">
-                <p>More</p>
-            </button>
-        </div>
-        <img src="images/lant-2.png" alt="">
-        <button class="res-but">
-            <p>More</p>
-        </button>
-    </div>                
     </div>
 
-</div>
+    </div>
+    </div>
+
+    </div>
+
+    <div class="promo">
+      <div class="promo-text">
+
+      <h1>Promotions</h1>
+      <div class="promo-mini-text"><a href="#"><p>All promotions</p>
+      <span>></span></a></div>
+    </div>
+    <swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
+    slides-per-view="4">
+    <swiper-slide class="knife"> 
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife"> 
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife"> 
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">  
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+      </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+
+    </swiper-slide>
+    </swiper-container>
+    <div class=" knife-list res">
+
+    <div class="knife">  
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+
+    </div>
+    </div>
+
+    </div>
+    <div class="new">
+      <div class="new-text">
+          <h1>New</h1>
+          <p>Welcome to the official website of ZLATMAX! Our store offers the widest selection of Zlatoust knives from Zlatoust Arms Factories and companies, we are official suppliers.</p>
+          <p><a href="#">
+              More news >
+          </a></p>
+      </div>
+      <swiper-container class="mySwiper new-knifes knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
+      slides-per-view="3">
+
+      <swiper-slide class="knife"> 
+      
+          <img src="./images/main-knife.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+          </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+      
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+      <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                              
+                          
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      </swiper-slide>
+    <swiper-slide class="knife"> 
+      
+          <img src="./images/main-knife.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+          </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+      
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+      <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                              
+                          
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      </swiper-slide>
+      <swiper-slide class="knife"> 
+      
+          <img src="./images/main-knife.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+          </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+      
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+      <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                              
+                          
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      </swiper-slide>
+      <swiper-slide class="knife">
+          
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+          </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
+    </swiper-slide>
+      <swiper-slide class="knife">
+          
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
+
+    </swiper-slide>
+    <swiper-slide class="knife">
+          
+      <img src="./images/main-knife.png" alt="">
+      <h3>Knife Fox</h3>
+      <div>
+          <p>95x18</p>
+          <p>Walnut, Aluminum</p>
+      </div>
+      <div>
+          <div class="stars">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+              <img src="./svgs/star.svg" alt="">
+
+          </div>
+          <p>12 reviews</p>
+      </div>
+      <hr>
+      <div class="price">
+              <h3>37,33$</h3>
+              <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                      <img src="./svgs/like.svg" alt="">
+                          
+                      
+              </div>
+              
+      </div>
+      <div class="add">
+          <button>
+              <div class="buy">
+                  <p>Add to cart</p>
+                  <img src="./svgs/buy.svg" alt="">
+                      
+              </div>
+          </button>
+      </div>
+
+    </swiper-slide>
+
+
+    </swiper-container>
+      <div class="knife-list res new-knifes">
+          <div class="knife">
+              <img src="./images/main-knife.png" alt="">
+              <h3>Knife Fox</h3>
+              <div>
+                  <p>95x18</p>
+                  <p>Walnut, Aluminum</p>
+              </div>
+              <div>
+                  <div class="stars">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+
+                  </div>
+                  <p>12 reviews</p>
+              </div>
+              <hr>
+              <div class="price">
+                      <h3>37,33$</h3>
+                      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                              <img src="./svgs/like.svg" alt="">
+                                  
+                              
+                      </div>
+                      
+              </div>
+              <div class="add">
+                  <button>
+                      <div class="buy">
+                          <p>Add to cart</p>
+                          <img src="./svgs/buy.svg" alt="">
+                              
+                      </div>
+                  </button>
+              </div>
+          </div>
+          <div class="knife">
+              <img src="./images/main-knife.png" alt="">
+              <h3>Knife Fox</h3>
+              <div>
+                  <p>95x18</p>
+                  <p>Walnut, Aluminum</p>
+              </div>
+              <div>
+                  <div class="stars">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+
+                  </div>
+                  <p>12 reviews</p>
+              </div>
+              <hr>
+              <div class="price">
+                      <h3>37,33$</h3>
+                      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                              <img src="./svgs/like.svg" alt="">
+                                  
+                              
+                      </div>
+                      
+              </div>
+              <div class="add">
+                  <button>
+                      <div class="buy">
+                          <p>Add to cart</p>
+                          <img src="./svgs/buy.svg" alt="">
+                              
+                      </div>
+                  </button>
+              </div>
+          </div>
+          <div class="knife">
+              <img src="./images/main-knife.png" alt="">
+              <h3>Knife Fox</h3>
+              <div>
+                  <p>95x18</p>
+                  <p>Walnut, Aluminum</p>
+              </div>
+              <div>
+                  <div class="stars">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+                      <img src="./svgs/star.svg" alt="">
+
+                  </div>
+                  <p>12 reviews</p>
+              </div>
+              <hr>
+              <div class="price">
+                      <h3>37,33$</h3>
+                      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                              <img src="./svgs/like.svg" alt="">
+                                  
+                              
+                      </div>
+                      
+              </div>
+              <div class="add">
+                  <button>
+                      <div class="buy">
+                          <p>Add to cart</p>
+                          <img src="./svgs/buy.svg" alt="">
+                              
+                      </div>
+                  </button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="promo">
+      <div class="promo-text">
+
+      <h1>Promotions</h1>
+      <div class="promo-mini-text"><a href="#"><p>All promotions</p>
+      <span>></span></a></div>
+    </div>
+    <swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
+    slides-per-view="4">
+    <swiper-slide class="knife"> 
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife"> 
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife"> 
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">  
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+      </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+
+    </swiper-slide>
+    </swiper-container>
+    <div class=" knife-list res">
+
+    <div class="knife">  
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+
+    </div>
+    </div>
+
+    </div>
+    <div class="promo">
+      <div class="promo-text">
+
+      <h1>Promotions</h1>
+      <div class="promo-mini-text"><a href="#"><p>All promotions</p>
+      <span>></span></a></div>
+    </div>
+    <swiper-container class="mySwiper knife-list no-res" pagination="true" pagination-clickable="true" space-between="30"
+    slides-per-view="4">
+    <swiper-slide class="knife"> 
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife"> 
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife"> 
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">  
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+      </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+
+    </swiper-slide>
+    <swiper-slide class="knife">
+      
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+      <p>95x18</p>
+      <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+      <div class="stars">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+          <img src="./svgs/star.svg" alt="">
+
+      </div>
+      <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+          <h3>37,33$</h3>
+          <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+                  <img src="./svgs/like.svg" alt="">
+                      
+                  
+          </div>
+          
+    </div>
+    <div class="add">
+      <button>
+          <div class="buy">
+              <p>Add to cart</p>
+              <img src="./svgs/buy.svg" alt="">
+                  
+          </div>
+      </button>
+    </div>
+
+    </swiper-slide>
+    </swiper-container>
+    <div class=" knife-list res">
+
+    <div class="knife">  
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+                  
+              
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+
+    </div>
+    <div class="knife">
+
+    <img src="./images/main-knife.png" alt="">
+    <h3>Knife Fox</h3>
+    <div>
+    <p>95x18</p>
+    <p>Walnut, Aluminum</p>
+    </div>
+    <div>
+    <div class="stars">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+      <img src="./svgs/star.svg" alt="">
+
+    </div>
+    <p>12 reviews</p>
+    </div>
+    <hr>
+    <div class="price">
+      <h3>37,33$</h3>
+      <div class="liked">
+    <img src="./svgs/fav.svg" alt="">
+              <img src="./svgs/like.svg" alt="">
+      </div>
+      
+    </div>
+    <div class="add">
+    <button>
+      <div class="buy">
+          <p>Add to cart</p>
+          <img src="./svgs/buy.svg" alt="">
+              
+      </div>
+    </button>
+    </div>
+
+    </div>
+    </div>
+
+    </div>
+    <div class="articles">
+      <h1>Our articles</h1>
+      <div class="article-list">
+      <div class="single-article">
+          <img src="images/art-1.png" alt="">
+          <div class="article-text">
+          <h3> All about knives: how to choose the right one</h3>
+          <p>24.07.2019</p>
+      </div>
+      </div>
+      <div class="single-article">
+          <img src="images/art-2.png" alt="">
+          <div class="article-text">
+          <h3>How to choose the right flashlight</h3>
+          <p>24.07.2019</p>
+      </div>
+      </div>
+      <div class="single-article">
+          <img src="images/art-3.png" alt="">
+          <div class="article-text">
+          <h3>Kitchen knives for housewives</h3>
+          <p>24.07.2019</p>
+      </div>
+      </div>
+      <div class="single-article">
+          <img src="images/art-4.png" alt="">
+          <div class="article-text">
+          <h3>Kitchen knives for housewives</h3>
+          <p>24.07.2019</p>
+      </div>
+      </div> 
+    </div>
+    </div>
+    <div class="lanterns">
+      <div class="lantern-list">
+      <div class="single-lantern">
+          <div class="lantern-text">
+              <h3>Tactical Flashlights</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, 
+                  consectetur adipiscing elit.</p>
+                  <button class="no-res-but">
+                      <p>More</p>
+                  </button>
+          </div>
+          <img src="images/lant-1.png" alt="">
+          <button class="res-but">
+              <p>More</p>
+          </button>
+      </div>
+      <div class="single-lantern">
+          <div class="lantern-text">
+              <h3>Deck multi-flashlights</h3>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, 
+                  consectetur adipiscing elit.</p>
+              <button class="no-res-but">
+                  <p>More</p>
+              </button>
+          </div>
+          <img src="images/lant-2.png" alt="">
+          <button class="res-but">
+              <p>More</p>
+          </button>
+      </div>                
+      </div>
+
+    </div>
     <div class="lantern-container">
-        <h1>Lanterns</h1>
-        <div class=" lan-list ">
+      <h1>Lanterns</h1>
+      <div class=" lan-list ">
 
-            <div class="knife">  
-        
-            <img src="./images/lantern.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-            </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-        
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-        <img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                                
-                            
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        </div>
-            <div class="knife">
-                
-            <img src="./images/lantern.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-                </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-        
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-        <img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                                
-                            
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        </div>
-            <div class="knife">
-                
-            <img src="./images/lantern.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-            </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-        
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-        <img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                                
-                            
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        
-        </div>
-        <div class="knife">
-                
-            <img src="./images/lantern.png" alt="">
-            <h3>Knife Fox</h3>
-            <div>
-                <p>95x18</p>
-                <p>Walnut, Aluminum</p>
-            </div>
-            <div>
-                <div class="stars">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-                    <img src="./svgs/star.svg" alt="">
-        
-                </div>
-                <p>12 reviews</p>
-            </div>
-            <hr>
-            <div class="price">
-                    <h3>37,33$</h3>
-                    <div class="liked">
-        <img src="./svgs/fav.svg" alt="">
-                            <img src="./svgs/like.svg" alt="">
-                    </div>
-                    
-            </div>
-            <div class="add">
-                <button>
-                    <div class="buy">
-                        <p>Add to cart</p>
-                        <img src="./svgs/buy.svg" alt="">
-                            
-                    </div>
-                </button>
-            </div>
-        
-        </div>
-        </div>
+          <div class="knife">  
+      
+          <img src="./images/lantern.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+          </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+      
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+      <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                              
+                          
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      </div>
+          <div class="knife">
+              
+          <img src="./images/lantern.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+              </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+      
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+      <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                              
+                          
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      </div>
+          <div class="knife">
+              
+          <img src="./images/lantern.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+          </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+      
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+      <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                              
+                          
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      
+      </div>
+      <div class="knife">
+              
+          <img src="./images/lantern.png" alt="">
+          <h3>Knife Fox</h3>
+          <div>
+              <p>95x18</p>
+              <p>Walnut, Aluminum</p>
+          </div>
+          <div>
+              <div class="stars">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+                  <img src="./svgs/star.svg" alt="">
+      
+              </div>
+              <p>12 reviews</p>
+          </div>
+          <hr>
+          <div class="price">
+                  <h3>37,33$</h3>
+                  <div class="liked">
+      <img src="./svgs/fav.svg" alt="">
+                          <img src="./svgs/like.svg" alt="">
+                  </div>
+                  
+          </div>
+          <div class="add">
+              <button>
+                  <div class="buy">
+                      <p>Add to cart</p>
+                      <img src="./svgs/buy.svg" alt="">
+                          
+                  </div>
+              </button>
+          </div>
+      
+      </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<div class="footer-part">
+  <div class="footer-part">
   <div class="first-part">
       <h3>Zlatoust knives online store "ZLATMAX"</h3>
       <p>Our online store "ZLATMAKS" offers you very high quality knives from the city of gunsmiths - Zlatoust. Zlatoust knives are known and popular among consumers both on the Russian market and abroad: hunting, household, tourist, fishing, folding and throwing knives. Zlatoust's knife is an ideal friend and comrade in everyday life and in extreme situations. Many products are covered by a guarantee of up to 10 years - this is one of the main indicators of quality. For you on our site "zlatmax" a huge assortment of Zlatoust knives is offered. Our managers will help you decide and choose the best Zlatoust knife, focusing on your wishes.</p>
@@ -4444,6 +4455,6 @@ slides-per-view="4">
           <p>Zlatoust knives www.zlatmax.ru ©</p>
       </div>
   </footer>
-</div>
- </body>
+  </div>
+</body>
 </html>
