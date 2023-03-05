@@ -1,51 +1,15 @@
 .knives-type-wrapp {
-  margin-bottom: 120px;
+  margin-bottom: 15px;
 }
 
-/* knives page slider */
-  /* height: calc(100vh - 32vh); */
-/* .swiper {
-  width: 100%;
-  max-width: 754px;
-
-  height: calc(100em - 973px);
-}
-
-.mySwiper {
-  box-sizing: border-box;
-  padding-top: 10px;
-  height: inherit;
-}
-
-.swiper-slide {
-  margin-right: 0;
-  height: initial;
-}
-
-.mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;  
-  opacity: 0.4;
-}
-
-.mySwiper .swiper-slide-thumb-active { opacity: 1 }
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  cursor: pointer;
-} */
-
-/* .mySwiper .swiper-slide-active { height: initial } */
-
-  /* max-width: 754px; */
-/* .knives-type-slider-container {
+.swiper, .swiper-container {
   width: 47%;
-} */
+  max-width: 830px;
+}
 
-.knives-type-details { width: 53% }
+.knives-type-page .mySwiper {
+  width: initial;
+}
 
 /*? knives type main page */
 .knives-type-page {
@@ -70,15 +34,14 @@
   font-weight: bold;
 }
 
-/* .first-char-elem { margin-left: var(--mr-5) } */
-
 .knives-type-page-path-link .last-path-link { color: var(--yellow) }
 
 .knives-type-details {
+  width: 51%;
   background: var(--FEFEFE);
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px 2%;
-  /* padding: 1% 2% ; */
+  padding: clamp(5px, 30px, 30px) clamp(2%, 3%, 30px);
+  height: fit-content;
 }
 
 .knives-type-details img, .knives-type-character-feedback img {
@@ -141,11 +104,11 @@
   color: var(--24AD53);
   font-weight: 500;
   font-size: 16px;
-  line-height: 19.5px;
+  /* line-height: 19.5px; */
 }
 
 .knives-type-series-details, .knives-type-character-select-container { 
-  padding: 25px 0 30px;
+  padding: clamp(5px,16px,30px) clamp(0.5%, 1%, 30px);
   border-bottom: 1px solid var(--14141426);
 }
 .knives-type-series-details :first-child p,
@@ -157,12 +120,18 @@
   margin-bottom: var(--mb-20);
 }
 
+.knives-type-series-details :last-child p:last-child, 
+.knives-type-series-details :first-child p:last-child, 
+.knives-type-character-select-container :first-child p:last-child, 
+.knives-type-select-wrapp :last-child .select-opt { margin-bottom: 0 }
+
+
 .knives-type-series-details .knives-type-series-item:first-child {
   color: var(--darkBlack);
   margin-right: var(--mr-40);
 }
 
-.knives-type-series-details :last-child p {
+.knives-type-series-details .knives-type-series-item > :last-child p  {
   color: var(--141414Opacity50)
 }
 
@@ -239,10 +208,6 @@
   line-height: 20px;
   color: var(--darkBlack);
   padding: 10px;
-}
-
-.knives-type-details-buy {
-  padding: 30px 0 0;
 }
 
 .knives-type-item-hint { position: relative }
@@ -324,6 +289,8 @@
   display: block;
 }
 
+.knives-type-details-buy-item { margin: 22px 0 0}
+
 .knives-type-details-buy-item button, .write-feedback-btn {
   cursor: pointer;
   border: none;
@@ -380,9 +347,8 @@
 .knives-type-buy-buttons button, .write-feedback-btn {
   background: var(--darkBlack);
 }
-
-
 /***********/
+
 .knive-type-title-active {
   font-weight: 700 !important;
   border-bottom: 2px solid var(--yellow) !important;
@@ -414,10 +380,6 @@
   border-bottom: 2px solid transparent;
   transition: .3s ease;
 }
-
-/* .knives-type-character-container {
-  transition-duration: 2s;
-} */
 
 .knives-type-all-character .knives-type-character-container:nth-child(2) {
   padding: 30px;
@@ -530,14 +492,13 @@
   height: 15px;
 }
 
+.knives-type-page-promo .promo {
+  padding: clamp(3vw, 5vw, 8vw) clamp(3%, 8.2%, 8.2%);
+}
 
 
 @media (width < 1700px) {
    /* height: calc(100vh - 28vh) */
-  /* .mySwiper2 {   
-    height: calc(100em - 949px);
-  }       */
-
   .knives-type-buy-buttons button { padding: 2px 1em }
 }
 
@@ -548,20 +509,14 @@
 }
 
 @media (width < 1400px) {
-  /* .mySwiper2 { height: calc(100em - 927px) } */
-    /* .mySwiper2 { height: calc(100em - 990px) } */
-
   .knives-type-page { margin: 30px 4% }
 
   .knives-type-character-select-container .knives-type-select-wrapp {
     width: var(--w-50);
   }
 
-  .knives-type-details { padding: 30px 2% 0 }
-
-  .knives-type-series-details, .knives-type-character-select-container {
-    padding: 25px 0 0;
-  }
+  .knives-type-details { padding: clamp(5px, 18px, 30px) clamp(2%, 3%, 30px) }
+ 
 
   .knives-type-details-buy {
     padding: 15px 0;
@@ -571,9 +526,6 @@
 }
 
 @media (width < 1200px) {
-  .knives-type-wrapp { margin-bottom: 50px }
-  /* .mySwiper2 { height: calc(100vh - 16vh) } */
-  /* .mySwiper2 { height: calc(100em - 915px) } */
 
   .knives-type-title > :first-child, .knives-title-item h2 { width: var(--w-100) }
 
@@ -593,22 +545,30 @@
   }
 
   .select-choose-text { padding: 11.5px 3% }
+
+  .knives-title-link {
+    line-height: initial;
+  }
+
+  .knives-type-title > :last-child { display: var(--d-none) }
+
   .change-text-style { padding: 10px }
 
-  .knives-type-details-buy-item {
-    flex-direction: column;
-  }
+  .text-cost { font-size: var(--fsz24) }
+
+  .knives-type-item-cost img { width: 15px }
+
+  .knives-type-item-hint { display: var(d-none) }
+
+  .knives-type-buy-buttons { justify-content: var(--jc-c) }
+
+  .knives-type-buy-buttons button:nth-child(2) { display: var(--d-none) }
 
   .text-help-hidden-wrapp { width: 380px }  
 
-  .knives-type-counter-btn {
-    justify-content: center;
-    margin-bottom: var(--mb-15);
-  }
+  .knives-type-counter-btn { justify-content: var(--jc-c) }
 
   .knives-type-buy-buttons { justify-content: var(--jc-sb) }
-
-  .knives-basket-btn-wrapp { width: 48% }
 
   .knives-type-buy-buttons:last-child button, .knives-type-buy-buttons {
     justify-content: space-evenly;
@@ -626,30 +586,27 @@
 }
 
 @media (width <= 992px) {
-  /* .mySwiper2 { height: calc(100em - 70em) } */
   .knives-type-page { margin: 30px 1% }   
 
   .knives-type-wrapp { flex-direction: var(--fd-col) }
 
-  /* .knives-type-slider-container { width: var(--w-100) }
-
-  .knives-type-slider-container, .knives-type-details {
-    max-width: var(--w-100);
+  .swiper, .swiper-container {
     width: var(--w-100);
-  } */
+  }
 
   .knives-type-character-select-container .knives-type-select-wrapp:last-child {
     width: -webkit-fill-available;
   }
 
   .knives-type-details {
-    padding: 30px 12px;
+    width: var(--w-100);
     margin-left: 0;
+    margin-top: 20px
   }
 
-  /* .swiper { max-width: initial } */
-
   .knives-type-series-details { align-items: flex-start }
+
+  .knives-type-title > :last-child { display: var(--d-block) }
 
   .knives-type-series-item { width: var(--w-50) }
 
@@ -658,7 +615,16 @@
     top: -152px;
   }
 
+  .knives-basket-btn-wrapp:first-child {
+    width: 48%;
+  }
+  .knives-type-buy-buttons button:nth-child(2) { display: var(--d-block) }
+
   .knives-character-select-group { width: var(--w-60) }
+
+  .knives-type-character-select-container :first-child p {
+    margin-bottom: 6.5%;
+  }
   
   .knives-type-feedback-content { width: var(--w-100) }
 
@@ -693,16 +659,24 @@
     width: var(--w-100)
   }
 
+  .knives-type-details-buy-item { flex-direction: var(--fd-col) }
+
+  .knives-type-counter-btn { margin-bottom: var(--mb-15) }
+
+  .knives-basket-btn-wrapp:first-child { width: 100% }
+  
   .knives-type-buy-buttons:last-child button {
     justify-content: var(--jc-c);
     margin-bottom: var(--mb-15);   
   }
 
-  .knives-type-buy-buttons:nth-child(1) button {  margin-bottom: var(--mb-15) }
+  .knives-type-buy-buttons:nth-child(1) button {  margin-bottom: var(--mb-15) } 
 
   .knives-type-character-select-container .knives-type-select-wrapp p { font-size: var(--fsz-14) }
 
   .knives-type-character-container { padding: 30px 12px }
+
+  .knives-type-character-select-container :first-child p { margin-bottom: 5% }
 
   .knives-type-all-character .knives-type-character-container:nth-child(2) {
     width: var(--w-100);
@@ -738,8 +712,7 @@
   .region-post-item img {
     width: 90px;
     height: 55px;
-}
-
+  }
 }
 
 @media (width <= 576px) {
@@ -749,11 +722,11 @@
   .knives-type-series-details .knives-type-series-item:first-child { width: 40% }
   .knives-type-series-details .knives-type-series-item:last-child { width: 85% }
 
-  .rating-star { display: var(--d-none) }
+  .knives-type-title > :last-child { display: var(--d-none) }
+
+  .knives-type-title > :last-child { width: 48% }
 
   .knives-character-select-group { width: 100% }
 
   .knives-type-character-container .knives-character-select-group p { font-size: var(--fsz14) }
 }
-
-

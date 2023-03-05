@@ -3,9 +3,17 @@
   background: var(--1e2323);
 } */
 
+.fixed {
+  position: fixed;
+  z-index: 9999999;
+}
+/* .nav-container {position: fixed;} */
 .navbar-down-992 { display: none } /* turn off mobile navbar*/
 
-nav { background: var(--darkBlack) }
+nav {
+  background: var(--darkBlack);
+  width: 100%;
+}
 
 .nav-top, .nav-nav, .nav-list-wrapp, .sub-header-container {
   padding-right: 8.2%;
@@ -241,7 +249,10 @@ nav a, nav ul {
   margin: 60px 0 30px;
 }
 
-.sub-header {
+.sub-header {   
+     /* padding for navbar after scroll */
+  /* padding-top: 230px; */
+
   background-color: var(--1e2323);
   color: var(--white);
   font-weight: 500;
