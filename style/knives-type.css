@@ -1,19 +1,70 @@
 .knives-type-wrapp {
-  margin-bottom: 15px;
+  margin-bottom: 60px;
+  position: relative;
 }
 
-.swiper, .swiper-container {
-  width: 47%;
-  max-width: 830px;
+.knives-type-page swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.knives-type-page swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.knives-type-page swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+swiper-slide > img {
+  width: 100%;
+}
+
+.knives-type-page swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.knives-type-page swiper-slide {
+  background-size: cover;
+  background-position: center;
 }
 
 .knives-type-page .mySwiper {
-  width: initial;
+  height: 80%;
+  width: 100%;
 }
 
-/*? knives type main page */
+.mySwiper2 {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper2 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.knives-type-page swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+.knives-type-page .mySwiper {
+  height:540px;
+  width: 100%;
+}
+
 .knives-type-page {
-  /* margin: 30px 4%; */
   margin: 30px 8.2%;
 }
 
@@ -109,6 +160,7 @@
 
 .knives-type-series-details, .knives-type-character-select-container { 
   padding: clamp(5px,16px,30px) clamp(0.5%, 1%, 30px);
+  padding-right: 0;
   border-bottom: 1px solid var(--14141426);
 }
 .knives-type-series-details :first-child p,
@@ -137,69 +189,6 @@
 
 .knives-type-select-wrapp p {
   padding: 9.5px 0
-}
-
-.select-opt {
-  position: relative;
-  border: 1px solid var(--14141426);
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.knives-type-select-item { position: relative }
-
-.select-opt:after {
-  top: 0;
-  right: 0;
-  position: absolute;
-  padding: 20px;
-  content: '';
-  display: block;
-  height: initial;
-  background: var(--darkBlack);
-  color: var(--yellow);
-}
-
-.select-opt-dropdown-icon {
-  position: absolute;
-  top: 15px;
-  right: 17px;
-  z-index: 2;
-  width: 7.15px;
-  height: 11.79px;
-}
-
-.select-choose-text {
-  font-weight: 500;
-  font-size: var(--fsz14);
-  line-height: 17px;
-  color: var(--141414Opacity50);
-  padding: 11.5px;
-}
-
-.select-opt-list {
-  cursor: pointer;
-  position: absolute;
-  z-index: 10;
-  width: var(--w-100);
-  /* margin: 10px 0; */
-  padding: 20px 0;
-  background: #FEFEFE;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.select-opt-list li {
-  font-weight: 500;
-  font-size: var(--fsz16);
-  line-height: 20px;
-  color: var(--darkBlack);
-  padding: 10px 30px;
-  transition: background .3s ease;
-}
-
-.select-opt-list li:hover {
-  background: var(--darkBlack);
-  color: var(--white);
 }
 
 .change-text-style {
@@ -503,6 +492,10 @@
 }
 
 @media (width < 1600px) {
+  .knives-type-page {
+    margin-left: 6.2%;
+    margin-right: 6.2%;
+  }
   .knives-type-character-details .knives-type-character-details-item:nth-child(1) .character-details-text {
     width: 72%;
   }
@@ -515,8 +508,11 @@
     width: var(--w-50);
   }
 
-  .knives-type-details { padding: clamp(5px, 18px, 30px) clamp(2%, 3%, 30px) }
- 
+  .knives-type-page-promo .promo {
+    padding: clamp(3vw, 5vw, 8vw) clamp(3%, 4%, 4%);
+  }
+
+  .knives-type-details { padding: clamp(5px, 18px, 30px) clamp(2%, 3%, 30px) } 
 
   .knives-type-details-buy {
     padding: 15px 0;
@@ -590,10 +586,6 @@
 
   .knives-type-wrapp { flex-direction: var(--fd-col) }
 
-  .swiper, .swiper-container {
-    width: var(--w-100);
-  }
-
   .knives-type-character-select-container .knives-type-select-wrapp:last-child {
     width: -webkit-fill-available;
   }
@@ -626,14 +618,18 @@
     margin-bottom: 6.5%;
   }
   
-  .knives-type-feedback-content { width: var(--w-100) }
+  .knives-type-feedback-content { width: var(--w-100) !important }
 
   .knives-type-character-details {
     flex-direction: var(--fd-col);
     align-items: var(--ai-c);
   }
 
-  .knives-type-character-details-item { width: var(--w-100) }
+  .knives-type-character-details-item {
+    width: var(--w-100) !important;
+    border: none;
+  }
+
   .lg-jc-c { justify-content: var(--jc-c) }
 
   .character-details-subtitle {
@@ -704,6 +700,13 @@
     text-align: center;
     padding: 25px 12px;
   }
+
+  .knives-character-select-group { width: 100% }
+
+  .knives-character-select-group .knives-type-select-item {
+    max-width: inherit;
+    width: 100%;
+   }
 
   .knive-type-title-active { border-color: transparent !important }
 

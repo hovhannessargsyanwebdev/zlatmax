@@ -1,12 +1,8 @@
 const navList = document.querySelector('.nav-list-wrapp')
 const closeHamburgerBtn = document.querySelector('.hamburger-close')
 const body = document.getElementsByTagName('body')[0]
-// const stopSrollBody = document.querySelector('.stop-scroll-body')
 const navbarLinkKnives = document.getElementById('navbar-link-knives')
 const navbarProductList = document.querySelector('.navbar-product-list')
-// const knivesSelectHiddenItems = document.querySelectorAll('.select-opt-list')
-const knivesFilterContent = document.querySelector('.knives-filter-content')
-const filterSelects = document.querySelector('.filter-part')
 
 
 // show navbar nested items
@@ -132,324 +128,161 @@ function hideHeaderBorder () {
   hrBottom.classList.replace('d-block', 'd-none')
 }
 
-const plusCounterElem = document.querySelector('.plus-counter')
-const minusCounterElem = document.querySelector('.minus-counter')
-let costProduct = document.querySelector('.text-cost')
-let initialProductVal = costProduct.innerText
-let showCount = document.querySelector('.show-count')
-let counter = 1 
-
-function counterCostPlus() {
-  counter++
-  showCount.textContent = counter
-  let currentCost = +initialProductVal.replace(' ', '') 
-  costProduct.textContent = currentCost * counter
-}
-
-function counterCostMinus() {
-  if (+showCount.textContent < 2) return
-  counter--
-  let sumPrpoductVal = +costProduct.innerText
-  showCount.textContent = counter
-  let currentCost = sumPrpoductVal - (+initialProductVal.replace(' ', ''))
-  costProduct.textContent = currentCost
-}
-
-const showKnivesTypesList = (list) => list.classList.replace('d-none', 'd-block')
-
-const hideKnivesTypesList = (list) => list.classList.replace('d-block', 'd-none')
-
-let toggleKnivesTypeList = 0
-let currentSelectList
-const knivesTypeSelect = document.querySelectorAll('.knives-type-select-item')
-const knivesTypeSelectSwitch = knivesTypeSelect.forEach((item) => {  
-  let closest = item.closest(".knives-type-select-item")
-  let targetEl = closest.children[1]
-  
-  item.addEventListener('click', (e) => {
-    if (targetEl.classList.contains('d-none')) {    
-      if (toggleKnivesTypeList <= 0) {    
-        showKnivesTypesList(targetEl)
-        toggleKnivesTypeList++
-        currentSelectList = targetEl
-      }
-      if (currentSelectList.classList.contains('select-opt-list')) {
-        let currentSelectText = currentSelectList.parentNode.children[0].childNodes[1]
-        Array.from(currentSelectList.children).forEach((item, i) => {
-          item.addEventListener('click', () => {
-            currentSelectText.innerHTML = item.textContent
-            currentSelectText.classList.toggle('change-text-style')
-          })
-        })
-      }
-    }
-
-    else if (targetEl.classList.contains('d-block')) {
-      hideKnivesTypesList(targetEl)
-      toggleKnivesTypeList--   
-    }
-  })
-})
-
-const hideAboutKnivesContent = (oldItem, idx) => {
-  oldItem.classList.replace('knive-type-title-active','knive-type-title-no-active')
-  aboutKnivesTypeContent[idx].classList.replace('d-block', 'd-none')    
-}
-
-const aboutKnivesTypeContent = document.querySelectorAll('.knives-type-character-container')
-const showAboutKnivesContent = (targetLink, idx) => {
-  targetLink.classList.replace('knive-type-title-no-active', 'knive-type-title-active')
-  aboutKnivesTypeContent[idx].classList.replace('d-none', 'd-block')
-}
-
-let previousActiveItem = false
-let currentElIdx = null;
-const aboutKnivesTypeLinks = document.querySelector('.knives-type-character-title')
-const knivesDetailsSwitch = Array.from(aboutKnivesTypeLinks.children).forEach((item, i) => {
-  if (item.classList.contains('knive-type-title-active')) { currentElIdx = i }
-
-  item.addEventListener('click',(e) => {   
-    if (e.target !== aboutKnivesTypeLinks.children[0]) {
-      aboutKnivesTypeContent[0].classList.replace('d-block', 'd-none')
-      aboutKnivesTypeLinks.children[0].classList.replace('knive-type-title-active','knive-type-title-no-active')
-    }
-    
-    if (previousActiveItem) {
-      hideAboutKnivesContent(previousActiveItem, currentElIdx)    
-    }
-    
-    if (e.target.className === 'knive-type-title-active') return
-
-    else if (e.target.className !== 'knive-type-title-active') {
-      previousActiveItem = aboutKnivesTypeLinks.children[i] 
-      currentElIdx = i
-      showAboutKnivesContent(item, i)
-    }
-  })   
-})
-
-let switcher = -4
-const knivesTypeSelectsRegion = document.querySelector('.knives-type-select-group-wrapp')
-const showPostImg = knivesTypeSelectsRegion.addEventListener('click', (e) => {    
-  document.querySelector('.select-region')
-  const postImgShow = document.querySelector('.region-post')
-  if (e.target.className === 'select-list-region') {
-    let currentItm = document.querySelectorAll('.knives-character-select-group .select-choose-text').forEach((item) => {
-      if (item.className != 'change-text-style') switcher++
-    })    
-  }
-  if (switcher >= 0) postImgShow.classList.replace('d-none', 'd-block')    
-}) 
-
-const linkKnivesCuttingPage = document.querySelectorAll('.go-to-knives-cutting')
-const knivesTypePages = document.querySelector('.knives-type-page ')
-const subHeader = document.querySelector('.sub-header')
-const knivesFilterPage = document.querySelector('.knives-filter-page')
-const knivesTypePagePromo = document.querySelector('.knives-type-page-promo')
-const mainPart = document.querySelector('.main-part')
-const showKnivesCuttingPage = linkKnivesCuttingPage.forEach((item) => {
-  item.addEventListener('click', () => {   
-    if (knivesTypePages.classList.contains('d-none')) {
-      knivesTypePages.classList.replace('d-none', 'd-block')      
-      subHeader.classList.replace('d-block', 'd-none')
-      knivesFilterPage.classList.replace('d-block', 'd-none')
-      knivesTypePagePromo.classList.replace('d-none', 'd-block')
-      mainPart.classList.add('d-none')   
-    }
-    hamburgerClose()
-    hideNavbarLinksLists()
-    hideHeaderBorder()
-  })
-})
-
-const linkKnivesFilterPage = document.querySelectorAll('.go-knives-filter-page')
-const showKnivesFilterPage = linkKnivesFilterPage.forEach((item) => {
-  item.addEventListener('click', () => {
-    knivesFilterPage.classList.replace('d-none', 'd-block')
-    knivesTypePages.classList.replace('d-block', 'd-none')
-    subHeader.classList.replace('d-block', 'd-none')
-    mainPart.classList.add('d-none')
-    knivesTypePagePromo.classList.replace('d-block', 'd-none')
-    hamburgerClose()
-    hideNavbarLinksLists()
-    hideHeaderBorder()
-  })
-})
-
-const logoLink = document.querySelectorAll('.nav-logo')
-const backToMainPage = logoLink.forEach((link) => {
-  link.addEventListener('click', () => {
-    knivesTypePages.classList.replace('d-block', 'd-none')
-    knivesFilterPage.classList.replace('d-block', 'd-none')
-    subHeader.classList.replace('d-none', 'd-block')
-    mainPart.classList.remove('d-none')
-    knivesTypePagePromo.classList.replace('d-block', 'd-none')
-    // window.scrollTo(0,0)
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  })
-  resetAll()
-})
-
-function resetAll() {
-  hamburgerClose()
-  resetNavbarPathLink()
-  hideNavbarLinksLists()  
-  hideHeaderBorder()
-}
-
-// *****   filtration section    *****
-
-let productPricesList = []
-let productReviewsList = []
-let productRatingsList = []
-let productBrandsList = []
-let productList = document.querySelectorAll('.knife')
-
-setTimeout(() => { // hide cards
-  isWindowSizeSmall = false
-  if (window.innerWidth <= 992) {
-    isWindowSizeSmall = true
-    document.querySelector('.knives-filter-top').classList.replace('d-flex', 'd-none')   
-  }
-
-  Array.from(filterSelects.children).forEach((item) => {
-    if (isWindowSizeSmall) {
-
-      item.firstElementChild.classList.toggle('bord-b')
-      item.firstElementChild.children[1].classList.toggle('filter-select-rotate-icon')
-      item.lastElementChild.classList.toggle('filter-select-hide')
-    }
-    item.firstElementChild.addEventListener('click', (e) => {
-      item.firstElementChild.classList.toggle('bord-b')
-      item.firstElementChild.children[1].classList.toggle('filter-select-rotate-icon')
-      item.lastElementChild.classList.toggle('filter-select-hide')
-    })
-  })
-},0)
-
-setTimeout(() => { // get all product prices value in new array
-  let currentPrice 
-  productList.forEach((item) => {
-    Array.from(item.children).forEach((price) => {
-      if (price.className == 'price') {
-        currentPrice = parseInt(currentPrice = price.children[0].textContent)
-      }
-    })
-    productPricesList.push(currentPrice)
-  })
-}, 0)
-
-
-// doesn't work
-// let minRangeInput = document.querySelector('.min-input')
-// let maxRangeInput = document.querySelector('.max-input')
-// let minValueEl = document.querySelector('.min-range-text')
-// let maxValueEl = document.querySelector('.max-range-text')
-// let initialMinValue = +document.querySelector('.min-range-text').textContent
-// let initialMaxValue = +document.querySelector('.max-range-text').textContent
-
-// let currentMinValue = initialMinValue
-// let currentMaxValue = initialMaxValue
-// let filterRangeInputs = document.querySelector('.filter-range-slider')
-// let rangValue = document.querySelector('.range-value')
-
-// let filterRangelength = filterRangeInputs.offsetWidth
-// let betweenValue = Math.abs(initialMinValue - initialMaxValue)
-// let step = Math.floor(betweenValue / filterRangelength)
-
-// let currentMinStep = 0 
-// let currentMaxStep = 0 
-// let currentStepOffset = 0 
-// let maxStep = 0
-
-// function minInputValue (evn) {
-//   if (evn.offsetX < 1 || evn.offsetX > filterRangelength) return
-//   if (evn.offsetX > currentStepOffset) {
-//     currentMinValue += step 
-//   }
-
-//   if (evn.offsetX < currentStepOffset) {
-//     currentMinValue -= step
-//   }
-
-//   currentStepOffset = evn.offsetX 
-//   minValueEl.textContent = currentMinValue
-//   console.log(evn.offsetX);
-// }
-
-// function maxInputValue (evn) {
-//   if (evn.offsetX > filterRangelength || evn.offsetX < 1 ) return
-
-//   if (evn.offsetX > currentStepOffset) {
-//     currentStepOffset += step
-//     currentMaxValue.textContent = parseInt(+currentMaxValue.textContent + currentStepOffset)
-//   }
-//   else if (evn.offsetX < currentStepOffset) {
-//     currentStepOffset -= step
-//     currentMaxValue.textContent = parseInt(+currentMaxValue.textContent - currentStepOffset)
-//   }
-//   currentStepOffset = evn.offsetX
-// }
-
-// function filterRangeStart (e) {
-//   if (e.type == 'mousedown') {
-//     if (e.target.className == 'min-input') {
-//       minRangeInput.addEventListener('mousemove', minInputValue)
+// const linkKnivesCuttingPage = document.querySelectorAll('.go-to-knives-cutting')
+// const knivesTypePages = document.querySelector('.knives-type-page ')
+// const subHeader = document.querySelector('.sub-header')
+// const knivesFilterPage = document.querySelector('.knives-filter-page')
+// const knivesTypePagePromo = document.querySelector('.knives-type-page-promo')
+// const mainPart = document.querySelector('.main-part')
+// const showKnivesCuttingPage = linkKnivesCuttingPage.forEach((item) => {
+//   item.addEventListener('click', () => {   
+//     if (knivesTypePages.classList.contains('d-none')) {
+//       knivesTypePages.classList.replace('d-none', 'd-block')      
+//       subHeader.classList.replace('d-block', 'd-none')
+//       knivesFilterPage.classList.replace('d-block', 'd-none')
+//       knivesTypePagePromo.classList.replace('d-none', 'd-block')
+//       mainPart.classList.add('d-none')   
 //     }
-//     else if (e.target.className == 'max-input') {
-//       maxRangeInput .addEventListener('mousemove', maxInputValue)
+//     hamburgerClose()
+//     hideNavbarLinksLists()
+//     hideHeaderBorder()
+//   })
+// })
+
+// const linkKnivesFilterPage = document.querySelectorAll('.go-knives-filter-page')
+// const showKnivesFilterPage = linkKnivesFilterPage.forEach((item) => {
+//   item.addEventListener('click', () => {
+//     knivesFilterPage.classList.replace('d-none', 'd-block')
+//     knivesTypePages.classList.replace('d-block', 'd-none')
+//     subHeader.classList.replace('d-block', 'd-none')
+//     mainPart.classList.add('d-none')
+//     knivesTypePagePromo.classList.replace('d-block', 'd-none')
+//     hamburgerClose()
+//     hideNavbarLinksLists()
+//     hideHeaderBorder()
+//   })
+// })
+
+// const logoLink = document.querySelectorAll('.nav-logo')
+// const backToMainPage = logoLink.forEach((link) => {
+//   link.addEventListener('click', () => {
+//     knivesTypePages.classList.replace('d-block', 'd-none')
+//     knivesFilterPage.classList.replace('d-block', 'd-none')
+//     subHeader.classList.replace('d-none', 'd-block')
+//     mainPart.classList.remove('d-none')
+//     knivesTypePagePromo.classList.replace('d-block', 'd-none')
+//     // window.scrollTo(0,0)
+//     window.scrollTo({top: 0, behavior: 'smooth'});
+//   })
+//   resetAll()
+// })
+
+// function resetAll() {
+//   hamburgerClose()
+//   resetNavbarPathLink()
+//   hideNavbarLinksLists()  
+//   hideHeaderBorder()
+// }
+
+// // *****   filtration section    *****
+// let pricesList = []
+// let reviewsList = []
+// let ratingsList = []
+// let brandsList = []
+// let productList = document.querySelectorAll('.knife')
+
+// setTimeout(() => { // hide cards
+//   isWindowSizeSmall = false
+//   if (window.innerWidth <= 992) {
+//     isWindowSizeSmall = true
+//     document.querySelector('.knives-filter-top').classList.replace('d-flex', 'd-none')   
+//   }
+
+
+// window.onload = function () {
+//   setTimeout(() => { // get all values of price,review,rating,brand in new array
+//     let currentPrice 
+//     productList.forEach((item) => {
+//       Array.from(item.children).forEach((price) => {
+//         if (price.className == 'price') {
+//           currentPrice = parseInt(currentPrice = price.children[0].textContent)
+//         }
+//       })
+//       pricesList.push(currentPrice)
+//     })
+//   }, 0)
+// }
+
+// // call func get range values
+// let sliderSections = document.getElementsByClassName('filter-range-slider')
+// for (let i = 0; i < sliderSections.length; i++) {
+//   let sliders = sliderSections[i].getElementsByTagName("input");
+//   for(let j = 0; j < sliders.length; j++) {
+//     if (sliders[j].type === "range" ) {
+//       sliders[j].oninput = getValues;
+//       sliders[j].oninput();
 //     }
 //   }
-
-//   else if (e.type == 'mouseup') {
-//     minRangeInput.removeEventListener('mousemove', minInputValue )
-//     maxRangeInput .removeEventListener('mousemove', maxInputValue )
-//   }  
 // }
-// filterRangeInputs.addEventListener('mousedown', filterRangeStart)
-// filterRangeInputs.addEventListener('mouseup', filterRangeStart)
+// // *****   filtration  *****
+// function getValues() {
+//   let parent = this.parentNode;
+//   let minRangeValue = document.querySelector('.min-range-value')
+//   let maxRangeValue = document.querySelector('.max-range-value')
+//   let rangeValue = document.querySelector('.range-value')
+//   let slides = parent.getElementsByTagName("input");
+//   let slide1 = parseFloat(slides[0].value);
+//   let slide2 = parseFloat(slides[1].value);
+//   minRangeValue.textContent = slide1
+//   maxRangeValue.textContent = slide2
+//   let cordinateminValue = minRangeValue.getBoundingClientRect();
+//   rangeValue.style.left = `${cordinateminValue.width}px`
+//   rangeValue.textContent = `${slide2 - slide1}`
+// }
+// // *********
 
 
-// *** filter bottom pagination  ***
-const showMoreBtn = document.querySelector('.show-more-btn')
-let filterHideItemsCount = []
-let hideCards = setTimeout(() => {
-let hideKnivesCards = Array.from(knivesFilterContent.children)
-hideKnivesCards.forEach((item, idx, arr) => {
-    if (arr[idx] === arr[arr.length - 1]) {
-      return
-    }
-    if (window.innerWidth <= 1200) {
-      if (idx > 1) {
-        item.classList.replace('d-flex', 'd-none')
-        filterHideItemsCount.push(item)
-      }        
-    }
-    else if (idx > 6) {
-      item.classList.replace('d-flex', 'd-none')
-      filterHideItemsCount.push(item)
-    }
-})
-}, 0);
 
-function showMoreCards (e) {
-  let currentItems
-  if (window.innerWidth <= 1200) {
-    currentItems = filterHideItemsCount.splice(0, 2)
-  }
-  else {
-    currentItems = filterHideItemsCount.splice(0, 7)
-  }
+// // *** filter bottom pagination  ***
+// const showMoreBtn = document.querySelector('.show-more-btn')
+// let filterHideItemsCount = []
+// let hideCards = setTimeout(() => {
+// let hideKnivesCards = Array.from(knivesFilterContent.children)
+// hideKnivesCards.forEach((item, idx, arr) => {
+//     if (arr[idx] === arr[arr.length - 1]) {
+//       return
+//     }
+//     if (window.innerWidth <= 1200) {
+//       if (idx > 1) {
+//         item.classList.replace('d-flex', 'd-none')
+//         filterHideItemsCount.push(item)
+//       }        
+//     }
+//     else if (idx > 6) {
+//       item.classList.replace('d-flex', 'd-none')
+//       filterHideItemsCount.push(item)
+//     }
+// })
+// }, 0);
 
-  currentItems.forEach((item) => {
-    item.classList.replace('d-none', 'd-flex')
-  })
+// function showMoreCards (e) {
+//   let currentItems
+//   if (window.innerWidth <= 1200) {
+//     currentItems = filterHideItemsCount.splice(0, 2)
+//   }
+//   else {
+//     currentItems = filterHideItemsCount.splice(0, 7)
+//   }
 
-  if (filterHideItemsCount.length < 1) {
-    showMoreBtn.classList.toggle('d-none')
-  }
-}
-showMoreBtn.addEventListener('click', showMoreCards)
+//   currentItems.forEach((item) => {
+//     item.classList.replace('d-none', 'd-flex')
+//   })
+
+//   if (filterHideItemsCount.length < 1) {
+//     showMoreBtn.classList.toggle('d-none')
+//   }
+// }
+// showMoreBtn.addEventListener('click', showMoreCards)
 // **********
 
 
@@ -480,5 +313,3 @@ body.addEventListener('click', isShowNavbarLinksLists, true)
 closeHamburgerBtn.addEventListener('click', hamburgerClose, true)
 navbarLinkKnives.addEventListener('click', showNavbarNestedItems)
 hamburgerNavigationBack.addEventListener('click', resetNavbarPathLink)
-plusCounterElem.addEventListener('click', counterCostPlus)
-minusCounterElem.addEventListener('click', counterCostMinus)
