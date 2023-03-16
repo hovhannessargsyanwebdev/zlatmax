@@ -166,7 +166,7 @@
   position: absolute;
 }
 
-input[type='range'] {
+.filter-part input[type='range'] {
   width: inherit;
   height: 30px;
   /* overflow: hidden; */
@@ -174,24 +174,24 @@ input[type='range'] {
   outline: none;
 }
 
-input[type='range'],
-input[type='range']::-webkit-slider-runnable-track,
-input[type='range']::-webkit-slider-thumb {
+.filter-part input[type='range'],
+.filter-part input[type='range']::-webkit-slider-runnable-track,
+.filter-part input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
     background: none;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+.filter-part input[type='range']::-webkit-slider-runnable-track {
   width: 200px;
   height: 1px;
   background: #141414;
 }
 
-input[type='range']:nth-child(2)::-webkit-slider-runnable-track{
+.filter-part input[type='range']:nth-child(2)::-webkit-slider-runnable-track{
   background: none;
 }
 
-input[type="range"]::-webkit-slider-thumb {
+.filter-part input[type="range"]::-webkit-slider-thumb {
   position: relative;
   border-radius: 25px;
   z-index: 1;
@@ -204,7 +204,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 20px;  
 }
 
-input[type='range']:nth-child(1)::-webkit-slider-thumb{
+.filter-part input[type='range']:nth-child(1)::-webkit-slider-thumb{
   z-index: 2;
 }
 
@@ -217,13 +217,13 @@ input[type='range']:nth-child(1)::-webkit-slider-thumb{
 /********/
 
 /***** checkbox *****/
-input[type="checkbox"] {
+.filter-part input[type="checkbox"] {
   accent-color: #E8AA31;
   width: 16px;
   height: 16px;
 }
 
-input:checked {
+.filter-part input:checked {
   appearance: none;
   animation: none;
   background: #E8AA31;
@@ -458,6 +458,7 @@ input:checked {
   .filter-content-row {
     flex-direction: var(--fd-col);
     flex-wrap: nowrap;
+    align-items: var(--ai-c);
   }
 
   .filter-content-row .knife > img {
@@ -489,7 +490,7 @@ input:checked {
   .pr-check { margin-bottom: 3% }
 
   .filter-content-row, .filter-content-row .knife {
-    width: var(--w-100)
+    width: var(--w-100);
   }
 }
 

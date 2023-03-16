@@ -701,11 +701,11 @@ swiper-slide > img {
     padding: 25px 12px;
   }
 
-  .knives-character-select-group { width: 100% }
+  .knives-character-select-group { width: var(--w-100) }
 
   .knives-character-select-group .knives-type-select-item {
     max-width: inherit;
-    width: 100%;
+    width: var(--w-100);
    }
 
   .knive-type-title-active { border-color: transparent !important }

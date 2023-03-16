@@ -31,17 +31,19 @@
               <a href="#">About us</a>
               <a href="#">Payment and delivery</a>
               <a href="#">News</a>
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </div>
 
             <div class="nav-top-item">
               <div class="d-flex ai-c">
-                <img
-                  src="./img/svg/account.svg"
-                  class="account-svg"
-                  alt=""
-                />
-                <a href="#" class="ml-15">Account</a>
+                <a href="#" class="d-flex ai-c">
+                  <img
+                    src="./img/svg/account.svg"
+                    class="account-svg"
+                    alt=""
+                  />
+                  <span href="#" class="ml-15">Account</span>
+                 </a>
               </div>
             </div>
           </div>
@@ -82,8 +84,10 @@
 
                   <div class="nav-details-location">
                     <div class="nav-details-callNumber">
-                      <span>8-800-777-49-67</span>
-                      <a href="#">Order call</a>
+                      <a href="tel:8-800-777-49-67">
+                        <span>8-800-777-49-67</span>
+                        Order call
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -304,7 +308,7 @@
                   </li>
 
                   <li class="hamburger-list-link">
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                   </li>
 
                   <li class="hamburger-list-link">
@@ -427,7 +431,8 @@
 
               <div class="navbar-top-item">
                 <button>
-                  <img src="./img/svg/basket-mobile.svg" alt="" />
+                  <img src="./img/svg/basket-icon.svg" alt="">
+                  <span class="nav-basket-count-icon">0</span>
                 </button>
               </div>
 
@@ -450,10 +455,10 @@
       <div class="sub-header d-block">
         <div class="sub-header-container">
           <!-- version 8 -->
-          <div class="swiper mySwiper subheader-swiper">
+          <div class="swiper mySwiper subheader-swiper no-res">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="sub-header-wrapp  d-flex">
+                <div class="sub-header-wrapp d-flex">
                   <!-- mb-60 -->
                   <div class="sub-header-content">
                     <h1 class="mb-15">Certified online store</h1>
@@ -464,10 +469,23 @@
                       and companies, we are official suppliers.
                     </h3>
                   </div>  
+
+                  <div class="sub-header-img-wrapp">
+                    <img src="./img/sub-img.png" alt="">
+                    <span class="sub-header-plus">
+                      <img src="../img/svg/sub-header-plus.svg" alt="">
+                    </span>
+                    <span class="sub-header-plus">
+                      <img src="../img/svg/sub-header-plus.svg" alt="">
+                    </span>
+                    <span class="sub-header-plus">
+                      <img src="../img/svg/sub-header-plus.svg" alt="">
+                    </span>
+                  </div>
                 </div>
 
                 <!-- <a  href="knives-types.html"></a> -->
-                <button class="sub-header-btn mb-30"> Details </button>    
+                <button class="sub-header-btn"> Details </button>    
                          
                 <div class="sub-header-bottom d-flex jc-sb">
                   <div class="sub-header-bottom-item">
@@ -528,33 +546,59 @@
                     and companies, we are official suppliers.
                   </h3>
                 </div>
-
-                <button class="sub-header-btn mb-30">Details</button>
-                <!-- <img class="d-block" src="img/svg/Group-3.svg" alt="" /> -->
-      
-                <div class="sub-header-bottom d-flex jc-sb">
-                  <div class="sub-header-bottom-item">
-                    <img src="./img/svg/Group-73.svg" alt="" />
-                    <p>100% Money back guarantee</p>
-                  </div>
-                  <div class="sub-header-bottom-item">
-                    <img src="./img/svg/Group-65.svg" alt="" />
-                    <p>Delivery in Russia, Kazakhstan and Belarus</p>
-                  </div>
-                  <div class="sub-header-bottom-item">
-                    <img src="./img/svg/Group-66.svg" alt="" />
-                    <p>The possibility of placing an order without registration.</p>
-                  </div>
-                  <div class="sub-header-bottom-item">
-                    <img src="./img/svg/Group-71.svg" alt="" />
-                    <p>Discounts for regular customers.</p>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="main-pagins-wrapp">
               <div class="swiper-pagination swiper-pos-white"></div>
               <div class="swiper-pagination swiper-pagination2"></div>
+            </div>
+          </div>
+
+          <div class="res">
+            <div class="sub-header-wrapp d-flex">
+              <!-- mb-60 -->
+              <div class="sub-header-content">
+                <h1 class="mb-15">Certified online store</h1>
+                <h1 class="mb-30">zlatoust knives</h1>
+                <h3>
+                  Welcome to the official website of ZLATMAX! Our store offers the
+                  widest selection of Zlatoust knives from Zlatoust Weapon Factories
+                  and companies, we are official suppliers.
+                </h3>
+              </div>  
+
+              <div class="sub-header-img-wrapp">
+                <img src="./img/sub-img.png" alt="">
+                <span class="sub-header-plus">
+                  <img src="../img/svg/sub-header-plus.svg" alt="">
+                </span>
+                <span class="sub-header-plus">
+                  <img src="../img/svg/sub-header-plus.svg" alt="">
+                </span>
+                <span class="sub-header-plus">
+                  <img src="../img/svg/sub-header-plus.svg" alt="">
+                </span>
+              </div>
+            </div>
+            <button class="sub-header-btn"> Details </button>    
+                         
+            <div class="sub-header-bottom d-flex jc-sb">
+              <div class="sub-header-bottom-item">
+                <img src="./img/svg/Group-73.svg" alt="" />
+                <p>100% Money back guarantee</p>
+              </div>
+              <div class="sub-header-bottom-item">
+                <img src="./img/svg/Group-65.svg" alt="" />
+                <p>Delivery in Russia, Kazakhstan and Belarus</p>
+              </div>
+              <div class="sub-header-bottom-item">
+                <img src="./img/svg/Group-66.svg" alt="" />
+                <p>The possibility of placing an order without registration.</p>
+              </div>
+              <div class="sub-header-bottom-item">
+                <img src="./img/svg/Group-71.svg" alt="" />
+                <p>Discounts for regular customers.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -3280,32 +3324,40 @@
         <h1>Our articles</h1>
         <div class="article-list">
           <div class="single-article">
-            <img src="./img/art-1.png" alt="" />
-            <div class="article-text">
-              <h3>All about knives: how to choose the right one</h3>
-              <p>24.07.2019</p>
-            </div>
+            <a href="#">
+              <img src="./img/art-1.png" alt="" />
+              <div class="article-text">
+                <h3>All about knives: how to choose the right one</h3>
+                <p>24.07.2019</p>
+              </div>
+            </a>
           </div>
           <div class="single-article">
-            <img src="./img/art-2.png" alt="" />
-            <div class="article-text">
-              <h3>How to choose the right flashlight</h3>
-              <p>24.07.2019</p>
-            </div>
+            <a href="#">
+              <img src="./img/art-2.png" alt="" />
+              <div class="article-text">
+                <h3>How to choose the right flashlight</h3>
+                <p>24.07.2019</p>
+              </div>
+            </a>
           </div>
           <div class="single-article">
-            <img src="./img/art-3.png" alt="" />
-            <div class="article-text">
-              <h3>Kitchen knives for housewives</h3>
-              <p>24.07.2019</p>
-            </div>
+            <a href="#">
+              <img src="./img/art-3.png" alt="" />
+              <div class="article-text">
+                <h3>Kitchen knives for housewives</h3>
+                <p>24.07.2019</p>
+              </div>
+            </a>
           </div>
           <div class="single-article">
-            <img src="./img/art-4.png" alt="" />
-            <div class="article-text">
-              <h3>Kitchen knives for housewives</h3>
-              <p>24.07.2019</p>
-            </div>
+            <a href="#">
+              <img src="./img/art-4.png" alt="" />
+              <div class="article-text">
+                <h3>Kitchen knives for housewives</h3>
+                <p>24.07.2019</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -3527,7 +3579,7 @@
           <div>
             <p>SUPPORT</p>
             <ul>
-              <li><a href="#">Contact Information</a></li>
+              <li><a href="#contact">Contact Information</a></li>
               <li><a href="#">Purchase returns</a></li>
               <li><a href="#">Site Map</a></li>
             </ul>
@@ -3552,15 +3604,16 @@
           </div>
         </div>
         <hr />
-        <div class="bottom-part">
+        <div class="bottom-part" id="contact">
           <div class="bottom-section">
             <p>CONTACTS</p>
             <ul>
               <li>
                 <div class="info">
                   <img src="./img/svg/phone.svg" alt="" />
-
-                  <p>8 (800) 777-49-67</p>
+                  <p>
+                    <a href="tel:88007774967" target="_blank"> 8 (800) 777-49-67</a>                   
+                  </p>
                 </div>
               </li>
               <li>
@@ -3572,13 +3625,19 @@
               <li>
                 <div class="info">
                   <img src="./img/svg/gps.svg" alt="" />
-                  <p>Chrysostom, st. Highway,1, office "6B"</p>
+                  <p>
+                    <a href="https://www.google.com/maps/place/6+US-1,+Washington,+DC+20001,+USA/@38.9164802,-77.011589,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7b802640d4cc9:0x436dc3ad5391966b!8m2!3d38.916476!4d-77.009395!16s%2Fg%2F11f3zx86v0" target="_blank">
+                      Chrysostom, st. Highway,1, office "6B"
+                    </a>
+                  </p>
                 </div>
               </li>
               <li>
                 <div class="info">
                   <img src="./img/svg/mail.svg" alt="" />
-                  <p>info@zlatmax.ru</p>
+                  <p>
+                    <a href="mailto:info@zlatmax.ru" target="_blank">info@zlatmax.ru</a>
+                  </p>
                 </div>
               </li>
             </ul>
@@ -3608,10 +3667,10 @@
             </ul>
             <div class="submit-part">
               <input type="email" id="input" placeholder="example@gmail.com" />
-              <button onclick="Submit()" id="submit" type="submit">></button>
+              <button id="submit" type="submit">></button>
             </div>
             <div class="checkbox-part">
-              <input id="checkbox" onclick="isChecked()" type="checkbox" />
+              <input id="checkbox" type="checkbox" />
               <p>
                 I have read the Terms and Conditions and agree with the terms
               </p>

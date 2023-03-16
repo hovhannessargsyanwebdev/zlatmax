@@ -21,25 +21,23 @@
 const swiperDoublePagin = new Swiper('.subheader-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
-
-  // efects
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
+  breakpoints: {
+    992: {
+      noSwiping: true,
+    }
   },
-
-  // effect: 'flip',
-  // flipEffect: {
-  //   slideShadows: false,
+  // autoplay: {
+  //   delay: 3000,
+  //   pauseOnMouseEnter: true,
+  //   disableOnInteraction: false,
   // },
-
-  autoplay: {
-    delay: 3000,
-    pauseOnMouseEnter: true,
-    disableOnInteraction: false,
-  },
   speed: 500,
   lazy: true,
+  breakpoints: {
+    992: {
+      noSwiping: true,
+    }
+  },
   pagination: {
     el: '.swiper-pos-white',
     clickable: true,

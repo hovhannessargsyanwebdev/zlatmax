@@ -5,15 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZLATMAX</title>
-  <title>ZLATMAX</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/>
   <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> -->
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
 
-  <link rel="stylesheet" href="./style/knives-type.css">
   <link rel="stylesheet" href="./style/global-style.css">
+  <link rel="stylesheet" href="./style/knives-type.css">
 
   <link rel="stylesheet" href="./style/style.css">
   <link rel="stylesheet" href="./style/knives-filter.css">
@@ -38,17 +37,19 @@
             <a href="#">About us</a>
             <a href="#">Payment and delivery</a>
             <a href="#">News</a>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </div>
 
           <div class="nav-top-item">
             <div class="d-flex ai-c">
-              <img
-                src="./img/svg/account.svg"
-                class="account-svg"
-                alt=""
-              />
-              <a href="#" class="ml-15">Account</a>
+              <a href="#" class="d-flex ai-c">
+                <img
+                  src="./img/svg/account.svg"
+                  class="account-svg"
+                  alt=""
+                />
+                <span href="#" class="ml-15">Account</span>
+               </a>
             </div>
           </div>
         </div>
@@ -91,8 +92,10 @@
 
                 <div class="nav-details-location">
                   <div class="nav-details-callNumber">
-                    <span>8-800-777-49-67</span>
-                    <a href="#">Order call</a>
+                    <a href="tel:8-800-777-49-67">
+                      <span>8-800-777-49-67</span>
+                      Order call
+                    </a>
                   </div>
                 </div>
               </div>
@@ -313,7 +316,7 @@
                 </li>
 
                 <li class="hamburger-list-link">
-                  <a href="#">Contact</a>
+                  <a href="#contact">Contact</a>
                 </li>
 
                 <li class="hamburger-list-link">
@@ -1786,7 +1789,7 @@
         <div>
           <p>SUPPORT</p>
           <ul>
-            <li><a href="#">Contact Information</a></li>
+            <li><a href="#contact">Contact Information</a></li>
             <li><a href="#">Purchase returns</a></li>
             <li><a href="#">Site Map</a></li>
           </ul>
@@ -1811,15 +1814,16 @@
         </div>
       </div>
       <hr />
-      <div class="bottom-part">
+      <div class="bottom-part" id="contact">
         <div class="bottom-section">
           <p>CONTACTS</p>
           <ul>
             <li>
               <div class="info">
                 <img src="./img/svg/phone.svg" alt="" />
-
-                <p>8 (800) 777-49-67</p>
+                <p>
+                  <a href="tel:88007774967" target="_blank"> 8 (800) 777-49-67</a>                   
+                </p>
               </div>
             </li>
             <li>
@@ -1831,13 +1835,19 @@
             <li>
               <div class="info">
                 <img src="./img/svg/gps.svg" alt="" />
-                <p>Chrysostom, st. Highway,1, office "6B"</p>
+                <p>
+                  <a href="https://www.google.com/maps/place/6+US-1,+Washington,+DC+20001,+USA/@38.9164802,-77.011589,17z/data=!3m1!4b1!4m6!3m5!1s0x89b7b802640d4cc9:0x436dc3ad5391966b!8m2!3d38.916476!4d-77.009395!16s%2Fg%2F11f3zx86v0" target="_blank">
+                    Chrysostom, st. Highway,1, office "6B"
+                  </a>
+                </p>
               </div>
             </li>
             <li>
               <div class="info">
                 <img src="./img/svg/mail.svg" alt="" />
-                <p>info@zlatmax.ru</p>
+                <p>
+                  <a href="mailto:info@zlatmax.ru" target="_blank">info@zlatmax.ru</a>
+                </p>
               </div>
             </li>
           </ul>
@@ -1867,10 +1877,10 @@
           </ul>
           <div class="submit-part">
             <input type="email" id="input" placeholder="example@gmail.com" />
-            <button onclick="Submit()" id="submit" type="submit">></button>
+            <button id="submit" type="submit">></button>
           </div>
           <div class="checkbox-part">
-            <input id="checkbox" onclick="isChecked()" type="checkbox" />
+            <input id="checkbox" type="checkbox" />
             <p>
               I have read the Terms and Conditions and agree with the terms
             </p>
