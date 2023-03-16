@@ -1,19 +1,14 @@
 // ******** swiper version 9
-
 // const swiperEl = document.querySelector('swiper-container');
 // const swiperParams = {
 //   slidesPerView: 1,
-//   pagination: {
-//     clickable: true
-//    },
 // };
-
 // Object.assign(swiperEl, swiperParams);
 // swiperEl.initialize();
 // *********
 
 
-// *** swiper version 8   ***
+// *** swiper version 8 ***
 const swiperDoublePagin = new Swiper('.subheader-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
