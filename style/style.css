@@ -614,7 +614,6 @@ padding: 1rem 0;
     rotate: 270deg;
     width: 270px;
     margin: -4rem 0;
-
   }
   
   .list-2 img {
@@ -639,6 +638,7 @@ padding: 1rem 0;
   }
   .list-6 img {
     margin-left:7rem
+    
   }
   .article-list {
     flex-wrap: wrap;
@@ -743,6 +743,12 @@ padding: 1rem 0;
     margin: 0;
   }
 
+  .list-6 img { 
+    object-fit: cover;
+    height: 50%;
+    margin-left: 0;
+
+  }
 }
 
 @media (max-width:480px) {
