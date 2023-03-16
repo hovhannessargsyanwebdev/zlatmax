@@ -275,7 +275,7 @@ nav a, nav ul {
 
 .sub-header-wrapp {
   height: fit-content;
-  margin-bottom: -16vh;
+  margin-bottom: -26vh;
 }
 
 .sub-header-wrapp h1 {
@@ -515,7 +515,7 @@ nav a, nav ul {
   .sub-header button { margin: 0 0 2% }
 
   .sub-header-bottom {
-    margin: 5.8% 0 25px;
+    margin: 1.8% 0 25px;
   }
 
   .sub-header-plus { display: var(--d-none) }
