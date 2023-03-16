@@ -6,10 +6,6 @@
 //   pagination: {
 //     clickable: true
 //    },
-
-//   breakpoints: {
-//     1200: {},
-//   },
 // };
 
 // Object.assign(swiperEl, swiperParams);
@@ -26,18 +22,13 @@ const swiperDoublePagin = new Swiper('.subheader-swiper', {
       noSwiping: true,
     }
   },
-  // autoplay: {
-  //   delay: 3000,
-  //   pauseOnMouseEnter: true,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3000,
+    pauseOnMouseEnter: true,
+    disableOnInteraction: false,
+  },
   speed: 500,
   lazy: true,
-  breakpoints: {
-    992: {
-      noSwiping: true,
-    }
-  },
   pagination: {
     el: '.swiper-pos-white',
     clickable: true,
