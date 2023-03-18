@@ -39,8 +39,7 @@
   font-weight: 500;
   font-family: Montserrat;
   line-height: 25px;
-  background: var(--FEFEFE); 
-  /* margin-top: var(--mt-30); */
+  background: var(--FEFEFE);
   justify-content: var(--jc-sb);
 }
 
@@ -87,7 +86,6 @@
   position: absolute;
   z-index: 10;
   width: var(--w-100);
-  /* margin: 10px 0; */
   padding: 9px 0;
   background: #FEFEFE;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -106,7 +104,6 @@
   background: var(--darkBlack);
   color: var(--white);
 }
-
 
 .knives-filter-panel {
   width: 375px;
@@ -136,7 +133,6 @@
 
 .filter-range-wrapp {
   padding: 20px clamp(0.5vw,1.57vw,3vw) 15px;
-  /* margin-bottom: 20px; */
 }
 
 .filter-range-text { margin-bottom: var(--mb-20) }
@@ -169,7 +165,6 @@
 .filter-part input[type='range'] {
   width: inherit;
   height: 30px;
-  /* overflow: hidden; */
   cursor: pointer;
   outline: none;
 }
@@ -217,8 +212,14 @@
 /********/
 
 /***** checkbox *****/
+.filter-part label {
+  display: var(--d-flex);
+  align-items: var(--ai-c);
+}
+
 .filter-part input[type="checkbox"] {
   accent-color: #E8AA31;
+  margin-right: 10px;
   width: 16px;
   height: 16px;
 }
@@ -230,7 +231,7 @@
   color: #E8AA31;
   width: 14px;
   height: 14px;
-  margin-right: 2px;
+  margin-right: 12px;
   border-radius: 1px;
   outline: 1px solid #E8AA31;
   outline-offset: 2px;
@@ -271,6 +272,7 @@
 
 .filter-part span {
   color: var(--yellow);
+  margin-left: 10px;
 }
 
 .filter-part .min-range-text,
@@ -304,11 +306,6 @@
 
 .filter-select-hide {
   display: var(--d-none);
-  /* transition: 3s all;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  padding: 0; */
 }
 
 /******  filter pagination  *******/
@@ -350,7 +347,6 @@
   border-radius: 50%;
   padding: 1px 13.7px;
   cursor: pointer;
-  /* background: transparent ; */
 }
 
 .pagination-btns .pagination-previous-icon,
@@ -409,7 +405,6 @@
   .knives-filter-page {
     margin-right: 4%;
     margin-left: 4%;
-    /* margin: 12px 1% */
   }
 
   .knives-filter-panel { width: 50% }
@@ -444,8 +439,6 @@
   .show-more-wrapp { width: var(--w-100) }
 
   .pagination-btns { display: var(--d-none) }
-
-  /* .filter-content-row .buy p { font-size: var(--fsz-16) } */
 } 
 
 @media (width <= 992px) {

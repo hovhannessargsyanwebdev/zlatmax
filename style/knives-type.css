@@ -155,7 +155,6 @@ swiper-slide > img {
   color: var(--24AD53);
   font-weight: 500;
   font-size: 16px;
-  /* line-height: 19.5px; */
 }
 
 .knives-type-series-details, .knives-type-character-select-container { 
@@ -244,7 +243,6 @@ swiper-slide > img {
 .triangle {
   position: absolute;
   display: none;
-  /* width: 20px; */
   top: -24px;
   right: -4px;
   border-top: 16px solid #fff;
@@ -296,7 +294,6 @@ swiper-slide > img {
   white-space: nowrap;   
 }
 
-/* .knives-type-counter-btn button:nth-child(2) */
 .show-count {
   background: var(--d2d2d212);
   color: var(--black);
@@ -336,7 +333,6 @@ swiper-slide > img {
 .knives-type-buy-buttons button, .write-feedback-btn {
   background: var(--darkBlack);
 }
-/***********/
 
 .knive-type-title-active {
   font-weight: 700 !important;
@@ -425,7 +421,6 @@ swiper-slide > img {
 
 .character-details-text { 
   font-weight: 500;
-  /* width: 55%; */
 }
 
 .knives-type-character-feedback {
@@ -487,7 +482,6 @@ swiper-slide > img {
 
 
 @media (width < 1700px) {
-   /* height: calc(100vh - 28vh) */
   .knives-type-buy-buttons button { padding: 2px 1em }
 }
 
