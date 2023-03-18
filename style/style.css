@@ -3,20 +3,11 @@
   src: url(./Montserrat/fonts/Montserrat.ttf)
 }  
 
-/* *{
-  padding:0;
-  margin: 0;
-  box-sizing:border-box;
-  font-family: Montserrat;
-} */
-
 .types {
-  /* padding : clamp(3vw, 4vw, 8vw); */
   padding: clamp(2vw, 3.2vw, 5vw) clamp(3%, 8.2%, 8.2%);
 }
 
 .hits, .promo {
-  /* padding: clamp(3vw, 5vw, 8vw); */
   padding: clamp(2vw, 3.2vw, 5vw) clamp(3%, 8.2%, 8.2%);
   position: relative;
 }
@@ -75,7 +66,6 @@ line-height: 34px
 .type-text ul {
   margin-top:  1rem;
   margin-left: 1rem;
-
 }
 
 li::marker {
@@ -111,8 +101,8 @@ li::marker {
 }
 .hits h1 {
   margin-bottom: 3.8rem;
-  /* margin: 1rem 0; */
 }
+
 .knife div {
   display: flex;
   justify-content: space-between;
@@ -160,8 +150,6 @@ li::marker {
 }
 
 .new .knife {
-  /* margin-bottom: 0;
-  padding-bottom: 0; */
   height: initial;
   max-height: 559px;
 }
@@ -223,11 +211,10 @@ li::marker {
   background: #FEFEFE;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
-
 }
 
 .single-article:hover {
-  transform: scale(1.1);
+  box-shadow: 1px 2px 35px 6px rgba(0, 0, 0, 0.2)
 }
 
 .single-article h3 , .single-article p {
@@ -317,7 +304,6 @@ button {
 /* footer */
 .first-part {
   background-image: url('../img/back2.png');
-  /* padding: clamp(3vw, 5vw, 8vw); */
   padding: clamp(2vw, 3.2vw, 5vw) clamp(3%, 8.2%, 8.2%);
   background-repeat: no-repeat;
   background-size: cover;
@@ -327,7 +313,6 @@ button {
 .footer-part {
   background-color: #141414;
   color: white;
-  /* max-width: 1920px; */
   line-height: 27px;
 }
 
@@ -372,12 +357,10 @@ text-align: left;
 }
 
 .top-part, .bottom-part   {
-  /* padding:clamp(1vw, 2vw,5vw); */
   padding: clamp(2vw, 3.2vw, 5vw) clamp(3%, 8.2%, 8.2%);
 }
 
 .top-part div, .bottom-section{
-  /* padding:clamp(1vw,3vw,5vw) */
   width: 24%;
   padding-right: 3%;
   font-size: 18px;
@@ -386,8 +369,8 @@ text-align: left;
 .top-part p {
   line-height: 21.94px;
   font-weight: 600;
-
 }
+
 .top-part li a {
   font-weight: 500;
 }
@@ -456,10 +439,10 @@ svg {
 }
 
 .checkbox-part  {
-display: flex;
-align-items: flex-start;
-opacity: 80%;
-padding: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  opacity: 80%;
+  padding: 1rem 0;
 }
 
 .checkbox-part input {
@@ -504,10 +487,6 @@ padding: 1rem 0;
 .lan-list :first-child { margin-left: 0 }
 .lan-list :last-child { margin-right: 0 }
 
-.lan-list .knife:hover {
-  transform: scale(1.1);
-}
-
 @media (width >= 2200px) {
   .main-part, .first-part, .footer {
     margin: 0 auto;
@@ -539,7 +518,7 @@ padding: 1rem 0;
     margin-left: 1rem;
     margin-right: 0;
   }
-  /* .lan-list :last-child { margin-right: 1rem } */
+
   .lan-list .knife {
     margin: 1rem 1rem;
   }
@@ -763,16 +742,17 @@ padding: 1rem 0;
     max-width: 100%;
   }
   .submit-part input {
-    /* min-width: 224px; */
     min-width: none;
-
   }
+
   .ending-part p {
     padding: 1rem;
   }
+
   .ending-part p:first-child{
     width: 100%;
   }
+
   .checkbox-part p {
     padding: 0;
   }
