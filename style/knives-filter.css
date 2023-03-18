@@ -275,6 +275,8 @@
   margin-left: 10px;
 }
 
+.filter-part .pr-check span { color: initial }
+
 .filter-part .min-range-text,
 .filter-part .max-range-text {
   color: var(--darkBlack);
