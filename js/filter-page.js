@@ -127,7 +127,6 @@ function hideHeaderBorder () {
   hrBottom.classList.replace('d-block', 'd-none')
 }
 
-
 const showKnivesTypesList = (list) => list.classList.replace('d-none', 'd-block')
 
 const hideKnivesTypesList = (list) => list.classList.replace('d-block', 'd-none')
@@ -162,13 +161,8 @@ const knivesTypeSelectSwitch = knivesTypeSelect.forEach((item) => {
     }
   })
 })
-// *****   filtration section    *****
 
-let pricesList = []
-let reviewsList = []
-let ratingsList = []
-let brandsList = []
-let productList = document.querySelectorAll('.knife')
+// *****   filtration section    *****
 
 setTimeout(() => { // hide cards
   isWindowSizeSmall = false
@@ -191,20 +185,6 @@ setTimeout(() => { // hide cards
     })
   })
 },0)
-
-window.onload = function () {
-  setTimeout(() => { // get all values of price,review,rating,brand in new array
-    let currentPrice 
-    productList.forEach((item) => {
-      Array.from(item.children).forEach((price) => {
-        if (price.className == 'price') {
-          currentPrice = parseInt(currentPrice = price.children[0].textContent)
-        }
-      })
-      pricesList.push(currentPrice)
-    })
-  }, 0)
-}
 
 // call func get range values
 let sliderSections = document.getElementsByClassName('filter-range-slider')
@@ -231,10 +211,7 @@ function getValues() {
   rangeValue.style.left = `${cordinateminValue.width}px`
   rangeValue.textContent = `${slide2 - slide1}`
 }
-
 // *********
-
-
 
 // *** filter bottom pagination  ***
 const showMoreBtn = document.querySelector('.show-more-btn')

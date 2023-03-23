@@ -7,7 +7,7 @@ const navbarProductList = document.querySelector('.navbar-product-list')
 const navList = document.querySelector('.nav-list-wrapp')
 const closeHamburgerBtn = document.querySelector('.hamburger-close')
 const navbarLinkKnives = document.getElementById('navbar-link-knives')
-// const filterSelects = document.querySelector('.filter-part')
+
 function showNavbarNestedItems(e) {
   if (e.target == navbarLinkCatalog) {
     hamburgerList.classList.add('d-none')
