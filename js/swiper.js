@@ -1,14 +1,3 @@
-// ******** swiper version 9
-// const swiperEl = document.querySelector('swiper-container');
-// const swiperParams = {
-//   slidesPerView: 1,
-// };
-// Object.assign(swiperEl, swiperParams);
-// swiperEl.initialize();
-// *********
-
-
-// *** swiper version 8 ***
 const swiperDoublePagin = new Swiper('.subheader-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
@@ -65,7 +54,6 @@ const swiperPromo = new Swiper('.swiper-promo', {
 
 const swiperMainPart1 = new Swiper('.swiper-main-part-1',{
   slidesPerView: 4,
-  // pagination: true,
   clickable: true,
   spaceBetween: 30,
   pagination: {

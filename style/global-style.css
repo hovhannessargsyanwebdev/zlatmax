@@ -5,6 +5,8 @@
   font-family: Montserrat;
 }
 
+html { scroll-behavior: smooth }
+
 p { margin: 0; padding: 0}
 
 body { font-family: var(--fontMontserrat) }
@@ -148,7 +150,6 @@ ul { list-style: none}
   --bord-b: 1px solid #fff;
 
   /* swiper styles */
-  /* --swiper-pagination-bottom: 0% !important; */
   --swiper-theme-color: #E8AA31;
   --swiper-pagination-bullet-size: 2px !important;
   --swiper-pagination-bullet-height: 2px !important;
@@ -166,8 +167,6 @@ ul { list-style: none}
 .ai-s { align-items: var(--ai-s) }
 .ai-inher { align-items: var(--ai-inher) }
 .fd-col { flex-direction: var(--fd-col) }
-/* .as-start { align-self: var(--as-start) } */
-/* .as-baseiline {align-self: var(--as-baseline) } */
 .fb-42 { flex-basis: var(--fb-42) }
 .d-block {display: var(--d-block) }
 .d-inline-block { display: var(--d-inline-block) }
